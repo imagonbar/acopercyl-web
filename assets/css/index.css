@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
 
 :root {
-    /* Colors - Brand (Aligned with Logo) */
-    --primary: #00a896; /* Verde Lazo */
-    --primary-light: #48c7b8;
-    --primary-dark: #008e7f;
-    --secondary: #64748b; /* Gris */
-    --secondary-light: #94a3b8;
-    --secondary-dark: #475569;
+    /* Colors - Brand (Exact Hex Codes) */
+    --primary: #129670;
+    --primary-light: #17b889;
+    --primary-dark: #0e7a5b;
+    --secondary: #978e88;
+    --secondary-light: #b0a8a3;
+    --secondary-dark: #7a716c;
     
     /* Neutrals */
-    --bg-light: #ffffff;
-    --text-main: #0f172a; /* Negro/Azul muy oscuro */
-    --text-muted: #475569;
-    --white: #ffffff;
-    --border: #e2e8f0;
+    --bg-light: #e2e2e2;
+    --text-main: #1f1c1f;
+    --text-muted: #4a454a;
+    --white: #ffffff; /* Mantengo blanco puro para contrastes extremos si hace falta */
+    --surface: #e2e2e2; /* El blanco corporativo solicitado */
+    --border: #c8c8c8;
 
     /* Dark Mode Defaults */
     --bg-dark: #0f172a;
