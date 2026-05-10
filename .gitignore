@@ -1,0 +1,14 @@
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+
+# Laragon / Local
+error_log
+php_error.log
