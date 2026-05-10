@@ -338,34 +338,74 @@ section {
     border-color: var(--primary-light);
 }
 
-/* Footer */
+/* Footer Redesign */
 footer {
-    padding: 60px 0 40px;
-    background-color: var(--secondary);
+    padding: 80px 0 40px;
+    background-color: #1f1c1f; /* Gris Carbón Profundo solicitado */
+    color: #e2e2e2;
+    text-align: left; /* Alineación a la izquierda para columnas */
+}
+
+footer .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+footer .footer-brand img {
+    height: 100px; /* Logo más grande solicitado */
+    margin-bottom: 1.5rem;
+    filter: brightness(0) invert(1);
+}
+
+footer h4 {
     color: var(--white);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+footer .footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+footer .footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+footer .footer-links a {
+    color: #978e88;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+footer .footer-links a:hover {
+    color: var(--primary);
+}
+
+footer .footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
     text-align: center;
-    border-top: none;
+    font-size: 0.9rem;
+    color: #978e88;
 }
 
-footer p {
-    color: var(--white);
-    opacity: 0.9;
-}
-
-footer .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-footer img {
-    filter: brightness(0) invert(1); /* Hace que el logo se vea blanco si es oscuro */
-    opacity: 1 !important;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
+    footer .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    footer .footer-brand img {
+        margin: 0 auto 1.5rem;
+    }
+}
+
+/* Responsive - BREAKPOINT 1000px */
+@media (max-width: 1024px) {
     .nav-links, .btn-header {
         display: none;
     }
@@ -376,13 +416,11 @@ footer img {
 
     nav {
         justify-content: space-between;
-        flex-direction: row; /* Mantener horizontal en móvil */
         height: 80px;
-        padding: 0;
     }
 
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
     .cta-group {
@@ -393,10 +431,16 @@ footer img {
 
     .btn {
         width: 100%;
-        max-width: 280px;
+        max-width: 320px;
     }
 
     section {
         padding: 60px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
     }
 }
