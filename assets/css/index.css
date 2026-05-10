@@ -119,8 +119,10 @@ nav {
 /* Hero Section */
 .hero {
     padding: 180px 0 100px;
-    background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.05), transparent),
-                radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.05), transparent);
+    background: linear-gradient(rgba(248, 250, 252, 0.8), rgba(248, 250, 252, 0.8)), 
+                url('../img/hero-bg.png');
+    background-size: cover;
+    background-position: center;
     text-align: center;
 }
 

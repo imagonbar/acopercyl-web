@@ -12,3 +12,6 @@ Thumbs.db
 # Laragon / Local
 error_log
 php_error.log
+
+# Private resources
+Recursos sin subir/
