@@ -478,32 +478,53 @@ footer .footer-bottom {
     }
 }
 
-/* Ultra-Mobile Optimizations (< 360px) */
-@media (max-width: 380px) {
+/* Ultra-Mobile Optimizations (< 400px) */
+@media (max-width: 400px) {
     .logo span {
-        display: none; /* Oculta el texto para ganar espacio */
+        display: none;
+    }
+
+    .logo img {
+        height: 35px !important; /* Logo más pequeño */
+    }
+
+    .mobile-socio-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .burger-menu {
+        width: 25px;
+        height: 18px;
+    }
+
+    nav {
+        gap: 0.5rem;
+        height: 60px;
     }
 
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem; /* Texto más pequeño para evitar desbordes */
+        margin-top: 0;
     }
 
     .section-title h2 {
-        font-size: 1.8rem;
-    }
-
-    .cta-group {
-        width: 100%;
+        font-size: 1.5rem;
     }
 
     .btn {
-        padding: 0.7rem 1.5rem;
-        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
         min-width: 100%;
     }
 
     .container {
-        padding: 0 1rem;
+        padding: 0 0.75rem; /* Margen lateral mínimo */
+    }
+
+    .card {
+        padding: 1.25rem; /* Tarjetas más compactas */
     }
 }
 
