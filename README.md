@@ -16,7 +16,8 @@ Brindar una plataforma de información, apoyo y visibilidad para las personas af
 - [x] **Navegación:** Scroll suave implementado y coherencia entre páginas.
 - [x] **Formulario de Contacto:** Operativo vía Formspree con validación AJAX.
 - [ ] **Despliegue & Dominio:** Pendiente de URL oficial.
-- [ ] **CMS (Decap):** Infraestructura básica creada, pendiente de migración de contenidos tras despliegue.
+- [ ] **CMS (Decap):** Infraestructura básica creada, pendiente de migración de contenidos.
+- [ ] **SEO Avanzado:** Optimización de palabras clave, etiquetas Open Graph y Sitemap.
 
 ## 📁 Estructura del Proyecto
 - `index.html`: Página principal (Hero, Nosotros, Objetivos, Síntomas, Comunidad, FAQ, Contacto).
