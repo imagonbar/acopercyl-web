@@ -497,7 +497,7 @@ footer .footer-bottom {
     }
 
     .logo img {
-        height: 38px !important;
+        height: 45px !important; /* Aumentado como solicitaste */
     }
 
     .nav-actions {
