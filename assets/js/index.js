@@ -52,6 +52,24 @@ mobileLinks.forEach(link => {
     link.addEventListener('click', closeMenuFunc);
 });
 
+// FAQ Accordion Logic
+const faqQuestions = document.querySelectorAll('.faq-question');
+
+faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+        const item = question.parentElement;
+        
+        // Cierra otros items (opcional, para efecto acordeón real)
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+            if (otherItem !== item) {
+                otherItem.classList.remove('active');
+            }
+        });
+
+        item.classList.toggle('active');
+    });
+});
+
 // Cookie Banner Logic
 const cookieBanner = document.getElementById('cookie-banner');
 const acceptCookiesBtn = document.getElementById('accept-cookies');
