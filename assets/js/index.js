@@ -55,6 +55,7 @@ mobileLinks.forEach(link => {
 // Cookie Banner Logic
 const cookieBanner = document.getElementById('cookie-banner');
 const acceptCookiesBtn = document.getElementById('accept-cookies');
+const cookieSettingsBtn = document.getElementById('cookie-settings-btn');
 
 if (!localStorage.getItem('cookiesAccepted')) {
     cookieBanner.style.display = 'block';
@@ -63,6 +64,10 @@ if (!localStorage.getItem('cookiesAccepted')) {
 acceptCookiesBtn.addEventListener('click', () => {
     localStorage.setItem('cookiesAccepted', 'true');
     cookieBanner.style.display = 'none';
+});
+
+cookieSettingsBtn.addEventListener('click', () => {
+    cookieBanner.style.display = 'block';
 });
 
 console.log('ACOPERCYL Web initialized.');
