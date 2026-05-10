@@ -33,12 +33,16 @@ const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
 
 burgerBtn.addEventListener('click', () => {
     mobileMenu.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Evita el scroll cuando el menú está abierto
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus(); // Mejora de accesibilidad: pone el foco en el botón de cerrar
 });
 
 const closeMenuFunc = () => {
     mobileMenu.classList.remove('active');
+    mobileMenu.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = 'auto';
+    burgerBtn.focus(); // Devuelve el foco al botón de hamburguesa
 };
 
 closeBtn.addEventListener('click', closeMenuFunc);

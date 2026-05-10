@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACOPERCYL | Asociación de COVID Persistente de Castilla y León</title>
-    <meta name="description"
-        content="Apoyo, visibilidad y recursos para personas afectadas por COVID Persistente en Castilla y León. No estás solo en esta lucha.">
+    <meta name="description" content="Apoyo, información y recursos para afectados por COVID Persistente en Castilla y León. Dando voz al silencio.">
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/index.css">
@@ -16,12 +15,13 @@
 </head>
 
 <body>
+    <a href="#inicio" class="skip-link">Saltar al contenido principal</a>
 
     <header class="glass">
         <div class="container">
             <nav>
-                <a href="#" class="logo">
-                    <img src="assets/img/logo.png" alt="ACOPERCYL Logo" style="height: 50px; width: auto;">
+                <a href="#" class="logo" aria-label="Inicio - ACOPERCYL">
+                    <img src="assets/img/logo.png" alt="Logo de ACOPERCYL" style="height: 50px; width: auto;">
                     <span>ACOPERCYL</span>
                 </a>
                 
@@ -37,7 +37,7 @@
                 <div class="nav-actions">
                     <a href="#contacto" class="btn btn-primary btn-header">Hazte Socio</a>
                     <!-- Burger Button -->
-                    <button class="burger-menu" id="burger-btn">
+                    <button class="burger-menu" id="burger-btn" aria-label="Abrir menú de navegación">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -47,9 +47,9 @@
         </div>
 
         <!-- Mobile Menu Overlay -->
-        <div class="mobile-menu-overlay" id="mobile-menu">
+        <div class="mobile-menu-overlay" id="mobile-menu" aria-hidden="true" role="dialog">
             <div class="mobile-menu-content">
-                <button class="close-menu" id="close-btn">&times;</button>
+                <button class="close-menu" id="close-btn" aria-label="Cerrar menú">&times;</button>
                 <ul class="mobile-nav-links">
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#nosotros">Nosotros</a></li>
