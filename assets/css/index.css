@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
 
 :root {
-    /* Colors - Brand */
-    --primary: #2563eb;
-    --primary-light: #60a5fa;
-    --primary-dark: #1d4ed8;
-    --secondary: #10b981;
-    --secondary-light: #34d399;
-    --secondary-dark: #047857;
+    /* Colors - Brand (Aligned with Logo) */
+    --primary: #00a896; /* Verde Lazo */
+    --primary-light: #48c7b8;
+    --primary-dark: #008e7f;
+    --secondary: #64748b; /* Gris */
+    --secondary-light: #94a3b8;
+    --secondary-dark: #475569;
     
     /* Neutrals */
-    --bg-light: #f8fafc;
-    --text-main: #1e293b;
-    --text-muted: #64748b;
+    --bg-light: #ffffff;
+    --text-main: #0f172a; /* Negro/Azul muy oscuro */
+    --text-muted: #475569;
     --white: #ffffff;
     --border: #e2e8f0;
 
@@ -92,7 +92,7 @@ nav {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--text-main);
     text-decoration: none;
     display: flex;
     align-items: center;
