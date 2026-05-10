@@ -331,9 +331,13 @@ nav {
 }
 
 /* Sections Differentiation */
+section {
+    padding: 100px 0; /* Espaciado generoso para desktop */
+    position: relative;
+}
+
 #nosotros {
     background: var(--white);
-    position: relative;
     overflow: hidden;
 }
 
@@ -359,17 +363,17 @@ nav {
 #sintomas {
     background-color: var(--white);
     background-image: radial-gradient(var(--border) 1px, transparent 1px);
-    background-size: 20px 20px; /* Patrón de puntos sutil */
+    background-size: 20px 20px;
 }
 
 #sintomas .card {
-    border-top: 4px solid var(--primary); /* Acento médico en las tarjetas */
+    border-top: 4px solid var(--primary);
     background: var(--white);
 }
 
 #faq {
     background-color: #f4f6f8;
-    position: relative;
+    padding-bottom: 140px; /* Espacio extra para el degradado base */
 }
 
 #faq::before {
@@ -378,9 +382,15 @@ nav {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 120px;
     background: linear-gradient(to top, var(--white), transparent);
-    z-index: 0;
+    z-index: 1;
+    pointer-events: none; /* No interfiere con clics */
+}
+
+.faq-accordion {
+    position: relative;
+    z-index: 5; /* Por encima del degradado */
 }
 
 .bg-alt {
