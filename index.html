@@ -81,6 +81,7 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body>
@@ -534,6 +535,17 @@
     </button>
 
     <script src="assets/js/index.js"></script>
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

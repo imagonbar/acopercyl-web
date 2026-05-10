@@ -1,0 +1,29 @@
+backend:
+  name: git-gateway
+  branch: main # Rama a la que se enviarán los cambios
+
+local_backend: true # Permite probarlo localmente
+
+media_folder: "assets/img"
+public_folder: "/assets/img"
+
+collections:
+  - name: "pages"
+    label: "Páginas"
+    files:
+      - name: "home"
+        label: "Página de Inicio"
+        file: "index.html"
+        fields:
+          - {label: "Título Hero", name: "hero_title", widget: "string"}
+          - {label: "Descripción Hero", name: "hero_text", widget: "text"}
+          - {label: "Sección Nosotros", name: "about_text", widget: "markdown"}
+
+  - name: "faq"
+    label: "Preguntas Frecuentes"
+    folder: "content/faq"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Pregunta", name: "question", widget: "string"}
+      - {label: "Respuesta", name: "answer", widget: "markdown"}
