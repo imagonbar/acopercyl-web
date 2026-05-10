@@ -1,0 +1,29 @@
+{
+  "name": "covid-persistente-web",
+  "version": "1.0.0",
+  "description": "Sitio web oficial de la Asociación de COVID Persistente de Castilla y León (ACOPERCYL).",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imagonbar/acopercyl-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/imagonbar/acopercyl-web/issues"
+  },
+  "homepage": "https://github.com/imagonbar/acopercyl-web#readme",
+  "devDependencies": {
+    "vite": "^8.0.11"
+  }
+}
