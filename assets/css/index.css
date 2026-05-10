@@ -479,52 +479,52 @@ footer .footer-bottom {
 }
 
 /* Ultra-Mobile Optimizations (< 400px) */
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .logo span {
         display: none;
     }
 
     .logo img {
-        height: 35px !important; /* Logo más pequeño */
+        height: 32px !important;
+    }
+
+    .nav-actions {
+        gap: 0.5rem;
     }
 
     .mobile-socio-icon {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-    }
-
-    .burger-menu {
-        width: 25px;
-        height: 18px;
-    }
-
-    nav {
-        gap: 0.5rem;
-        height: 60px;
+        width: 38px;
+        height: 38px;
     }
 
     .hero h1 {
-        font-size: 1.6rem; /* Texto más pequeño para evitar desbordes */
+        font-size: 1.4rem !important; /* Más pequeño para evitar cortes */
         margin-top: 0;
     }
 
-    .section-title h2 {
-        font-size: 1.5rem;
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-group {
+        flex-direction: column !important; /* Forzado vertical */
+        width: 100%;
+        gap: 0.75rem;
     }
 
     .btn {
+        width: 100% !important;
+        min-width: 0 !important;
         padding: 0.6rem 1rem;
-        font-size: 0.85rem;
-        min-width: 100%;
     }
 
     .container {
-        padding: 0 0.75rem; /* Margen lateral mínimo */
+        padding: 0 1rem !important;
     }
 
     .card {
-        padding: 1.25rem; /* Tarjetas más compactas */
+        padding: 1.25rem;
     }
 }
 
