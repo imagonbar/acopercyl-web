@@ -150,6 +150,19 @@ nav {
     gap: 1.5rem;
 }
 
+.mobile-socio-icon {
+    display: none;
+    text-decoration: none;
+    padding: 0.5rem;
+    background: var(--primary); /* Cambiado a verde corporativo */
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
+}
+
 /* Burger Button */
 .burger-menu {
     display: none;
@@ -444,12 +457,15 @@ footer .footer-bottom {
 
     .hero h1 {
         font-size: 2.5rem;
+        margin-top: 0.5rem; /* Reducido para RWD */
     }
 
-    .cta-group {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
+    .mobile-socio-icon {
+        display: flex;
+    }
+
+    .mobile-menu-content {
+        justify-content: space-between;
     }
 
     .btn {
@@ -462,8 +478,77 @@ footer .footer-bottom {
     }
 }
 
+/* Ultra-Mobile Optimizations (< 360px) */
+@media (max-width: 380px) {
+    .logo span {
+        display: none; /* Oculta el texto para ganar espacio */
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-group {
+        width: 100%;
+    }
+
+    .btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+        min-width: 100%;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+}
+
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 2rem;
+    }
+}
+
+/* Cookie Banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(31, 28, 31, 0.95);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 20px 0;
+    z-index: 5000;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
+}
+
+.cookie-banner .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cookie-banner p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.cookie-banner a {
+    color: var(--primary-light);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .cookie-banner .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
     }
 }

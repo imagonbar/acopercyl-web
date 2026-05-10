@@ -52,4 +52,17 @@ mobileLinks.forEach(link => {
     link.addEventListener('click', closeMenuFunc);
 });
 
+// Cookie Banner Logic
+const cookieBanner = document.getElementById('cookie-banner');
+const acceptCookiesBtn = document.getElementById('accept-cookies');
+
+if (!localStorage.getItem('cookiesAccepted')) {
+    cookieBanner.style.display = 'block';
+}
+
+acceptCookiesBtn.addEventListener('click', () => {
+    localStorage.setItem('cookiesAccepted', 'true');
+    cookieBanner.style.display = 'none';
+});
+
 console.log('ACOPERCYL Web initialized.');
