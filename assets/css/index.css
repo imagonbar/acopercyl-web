@@ -333,6 +333,11 @@ nav {
 /* Sections */
 section {
     padding: 80px 0;
+    background-color: var(--white); /* Fondo por defecto blanco */
+}
+
+.bg-alt {
+    background-color: #f8f8f8; /* Gris muy suave para alternar */
 }
 
 .section-title {
