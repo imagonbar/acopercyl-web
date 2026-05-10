@@ -12,8 +12,19 @@
         gtag('js', new Date());
         gtag('config', 'G-XNJPXVKG98');
     </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
     <title>Aviso Legal y Privacidad | ACOPERCYL</title>
     <link rel="stylesheet" href="assets/css/index.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+
     <style>
         .legal-content {
             padding: 120px 0 80px;
@@ -52,11 +63,61 @@
         <div class="container">
             <nav>
                 <a href="index.html" class="logo">
+                <a href="index.html#inicio" class="logo" aria-label="Inicio - ACOPERCYL">
                     <img src="assets/img/logo.png" alt="Logo de ACOPERCYL" style="height: 50px; width: auto;">
                     <span>ACOPERCYL</span>
                 </a>
-                <a href="index.html" class="btn btn-primary">Volver al Inicio</a>
+
+                <!-- Desktop Navigation -->
+                <ul class="nav-links">
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="index.html#objetivos">Objetivos</a></li>
+                    <li><a href="index.html#sintomas">Síntomas</a></li>
+                    <li><a href="index.html#comunidad">Comunidad</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="index.html#contacto" class="btn btn-primary btn-header">Hazte Socio</a>
+
+                    <!-- Mobile Only Icon for Socio -->
+                    <a href="index.html#contacto" class="mobile-socio-icon" aria-label="Hazte Socio">
+                        <span style="font-size: 1.5rem;">🤝</span>
+                    </a>
+
+                    <!-- Burger Button -->
+                    <button class="burger-menu" id="burger-btn" aria-label="Abrir menú de navegación">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </nav>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobile-menu" aria-hidden="true" role="dialog">
+            <div class="mobile-menu-content">
+                <button class="close-menu" id="close-btn" aria-label="Cerrar menú">&times;</button>
+                <ul class="mobile-nav-links">
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="index.html#objetivos">Objetivos</a></li>
+                    <li><a href="index.html#sintomas">Síntomas</a></li>
+                    <li><a href="index.html#comunidad">Comunidad</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+                <div class="mobile-menu-footer">
+                    <a href="index.html#contacto" class="btn btn-primary" style="width: 100%; margin-bottom: 2rem;">Hazte
+                        Socio</a>
+                    <p style="text-align: center; font-size: 0.9rem; color: var(--text-muted);">
+                        afectadoscovidpersistentecyl@gmail.com
+                    </p>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -116,9 +177,27 @@
                     <p>Asociación de COVID Persistente de Castilla y León. Trabajando por el reconocimiento y apoyo
                         integral de los afectados.</p>
                     <div class="footer-social-icons">
-                        <a href="https://www.instagram.com/acopercyl/" target="_blank" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-                        <a href="https://x.com/Covidpersistcyl" target="_blank" aria-label="X"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z"></path></svg></a>
-                        <a href="https://www.facebook.com/groups/512722889776789/" target="_blank" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="https://www.instagram.com/acopercyl/" target="_blank" aria-label="Instagram"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg></a>
+                        <a href="https://x.com/Covidpersistcyl" target="_blank" aria-label="X"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z">
+                                </path>
+                            </svg></a>
+                        <a href="https://www.facebook.com/groups/512722889776789/" target="_blank"
+                            aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg></a>
                     </div>
                 </div>
                 <!-- Col 2: Navigation -->
@@ -126,9 +205,11 @@
                     <h4>Navegación</h4>
                     <ul class="footer-links">
                         <li><a href="index.html#inicio">Inicio</a></li>
-                        <li><a href="index.html#nosotros">Sobre nosotros</a></li>
+                        <li><a href="index.html#nosotros">Nosotros</a></li>
+                        <li><a href="index.html#objetivos">Objetivos</a></li>
                         <li><a href="index.html#sintomas">Síntomas</a></li>
-                        <!-- <li><a href="index.html#recursos">Recursos</a></li> -->
+                        <li><a href="index.html#comunidad">Comunidad</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
                         <li><a href="politica-privacidad.html">Privacidad y Cookies</a></li>
                     </ul>
                 </div>
@@ -153,6 +234,22 @@
             </div>
         </div>
     </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner" style="display: none;">
+        <div class="container">
+            <p>Utilizamos cookies propias y de terceros (Google Analytics) para mejorar tu experiencia. Al continuar
+                navegando, aceptas nuestra <a href="politica-privacidad.html">política de privacidad</a>.</p>
+            <button id="accept-cookies" class="btn btn-primary">Aceptar</button>
+        </div>
+    </div>
+
+    <!-- Floating Cookie Icon -->
+    <button id="cookie-settings-btn" class="cookie-settings-btn" aria-label="Configuración de cookies">
+        <span>🍪</span>
+    </button>
+
+    <script src="assets/js/index.js"></script>
 </body>
 
 </html>

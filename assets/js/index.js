@@ -11,19 +11,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Smooth Scroll for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            window.scrollTo({
-                top: target.offsetTop - 80,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
+// Smooth Scroll: Ahora se gestiona nativamente vía CSS con scroll-padding-top para mayor fluidez.
 
 // Mobile Menu Logic
 const burgerBtn = document.getElementById('burger-btn');

@@ -38,6 +38,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Un poco más de margen para el header fijo */
 }
 
 body {
@@ -355,25 +356,43 @@ section {
 }
 
 #objetivos {
-    background: linear-gradient(135deg, #ffffff 0%, #f0f7f4 100%);
-    border-top: 1px solid rgba(17, 138, 103, 0.05);
-    border-bottom: 1px solid rgba(17, 138, 103, 0.05);
+    background-color: #edf7f2; /* Verde menta suave para diferenciar de Nosotros */
+    border-top: 1px solid rgba(17, 138, 103, 0.1);
+    border-bottom: 1px solid rgba(17, 138, 103, 0.1);
 }
 
 #sintomas {
-    background-color: var(--white);
-    background-image: radial-gradient(var(--border) 1px, transparent 1px);
-    background-size: 20px 20px;
+    position: relative;
+    background: url('../img/symptoms_bg_abstract_1778427059395.png') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+/* Overlay para asegurar legibilidad */
+#sintomas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.75); /* Bajamos opacidad para que se vea la imagen */
+    z-index: 0;
+}
+
+#sintomas .container {
+    position: relative;
+    z-index: 1;
 }
 
 #sintomas .card {
     border-top: 4px solid var(--primary);
     background: var(--white);
+    box-shadow: var(--shadow-md);
 }
 
 #faq {
-    background-color: #f4f6f8;
-    padding-bottom: 140px; /* Espacio extra para el degradado base */
+    background-color: #f1f3f5; /* Gris un pelín más profundo */
+    padding-bottom: 140px;
 }
 
 #faq::before {
@@ -715,49 +734,72 @@ footer .footer-bottom {
 }
 
 /* Social Media Section */
-.social-card {
+#comunidad {
+    background-color: var(--white); /* Pasamos a blanco para contrastar con FAQ */
+    border-top: 1px solid var(--border);
+}
+
+#comunidad .flex-center {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: nowrap; /* Forzamos una sola fila en desktop */
+    margin-top: 3rem;
+}
+
+#comunidad .social-card {
+    display: flex;
+    flex-direction: row; /* Horizontal */
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     text-decoration: none;
     color: var(--text-main);
-    font-weight: 600;
+    background: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 50px; /* Estilo cápsula */
+    border: 1px solid var(--border);
     transition: var(--transition-standard);
+    flex: 1;
+    max-width: 300px; /* Evitamos que crezcan demasiado */
+    justify-content: center;
+}
+
+@media (max-width: 992px) {
+    #comunidad .flex-center {
+        flex-wrap: wrap; /* Permitimos envolver en tablets/móviles */
+    }
+    #comunidad .social-card {
+        flex: 1 1 100%; /* Ocupan todo el ancho en móviles */
+        max-width: 100%;
+    }
 }
 
 .social-card:hover {
     transform: translateY(-5px);
-    color: var(--primary);
-}
-
-.social-icon-wrapper {
-    width: 80px;
-    height: 80px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    transition: var(--transition-standard);
+    border-color: var(--primary);
     box-shadow: var(--shadow-md);
 }
 
-.social-icon-wrapper.ig {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+.social-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background: rgba(17, 138, 103, 0.05); /* Fondo muy suave del color principal */
+    transition: var(--transition-standard);
 }
 
-.social-icon-wrapper.x-corp {
-    background: #000000;
-}
-
-.social-icon-wrapper.fb {
-    background: #1877F2;
+.social-label {
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .social-card:hover .social-icon-wrapper {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    filter: brightness(1.1);
+    background: var(--primary);
+    color: var(--white);
 }
 
 /* Footer Social Icons */
@@ -775,6 +817,89 @@ footer .footer-bottom {
 .footer-social-icons a:hover {
     color: var(--primary-light);
     transform: scale(1.1);
+}
+
+/* Contact Section */
+.contact-wrapper {
+    display: flex;
+    justify-content: center; /* Centramos el formulario */
+    margin-top: 3rem;
+}
+
+.contact-form-container {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 24px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
+    width: 100%;
+    max-width: 800px; /* Ancho ampliado */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition-fast);
+    background-color: #fcfcfc;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(17, 138, 103, 0.1);
+    background-color: var(--white);
+}
+
+.btn-block {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #edf7f2 !important; /* Verde menta sólido exacto */
+    z-index: 1000;
+    transition: var(--transition-standard);
+    border-bottom: 1px solid rgba(17, 138, 103, 0.1);
+    box-shadow: var(--shadow-sm);
 }
 
 /* Cookie Banner */
@@ -815,4 +940,35 @@ footer .footer-bottom {
         text-align: center;
         gap: 1rem;
     }
+}
+
+/* Form Status Messages */
+.form-status-hidden {
+    display: none;
+}
+
+.form-status-visible {
+    display: block !important;
+    text-align: center;
+    padding: 2rem 0;
+    animation: formFadeIn 0.5s ease;
+}
+
+#form-status .status-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+#form-status h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+#form-status p {
+    color: var(--text-muted);
+}
+
+@keyframes formFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
