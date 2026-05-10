@@ -24,6 +24,8 @@
                     <img src="assets/img/logo.png" alt="ACOPERCYL Logo" style="height: 50px; width: auto;">
                     <span>ACOPERCYL</span>
                 </a>
+                
+                <!-- Desktop Navigation -->
                 <ul class="nav-links">
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#nosotros">Nosotros</a></li>
@@ -31,8 +33,32 @@
                     <li><a href="#recursos">Recursos</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
-                <a href="#contacto" class="btn btn-primary">Hazte Socio</a>
+
+                <div class="nav-actions">
+                    <a href="#contacto" class="btn btn-primary btn-header">Hazte Socio</a>
+                    <!-- Burger Button -->
+                    <button class="burger-menu" id="burger-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </nav>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobile-menu">
+            <div class="mobile-menu-content">
+                <button class="close-menu" id="close-btn">&times;</button>
+                <ul class="mobile-nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#sintomas">Síntomas</a></li>
+                    <li><a href="#recursos">Recursos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <a href="#contacto" class="btn btn-primary" style="width: 100%; margin-top: 2rem;">Hazte Socio</a>
+            </div>
         </div>
     </header>
 
@@ -40,7 +66,6 @@
         <!-- Hero Section -->
         <section id="inicio" class="hero">
             <div class="container">
-                <br>
                 <h1 class="font-heading">Vivir con COVID Persistente no debería hacerse en soledad</h1>
                 <p>Información, apoyo y recursos para quienes luchan contra el COVID Persistente en
                     Castilla y León. Dando voz al silencio.</p>
@@ -88,7 +113,6 @@
                 <div class="section-title">
                     <h2>Síntomas Frecuentes</h2>
                     <div class="divider"></div>
-                    <br>
 
                     <p>El COVID Persistente se manifiesta de múltiples formas, afectando diversos sistemas del cuerpo.
                     </p>

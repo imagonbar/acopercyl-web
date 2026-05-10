@@ -25,5 +25,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Future: Dark Mode Toggle implementation
+// Mobile Menu Logic
+const burgerBtn = document.getElementById('burger-btn');
+const closeBtn = document.getElementById('close-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+
+burgerBtn.addEventListener('click', () => {
+    mobileMenu.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Evita el scroll cuando el menú está abierto
+});
+
+const closeMenuFunc = () => {
+    mobileMenu.classList.remove('active');
+    document.body.style.overflow = 'auto';
+};
+
+closeBtn.addEventListener('click', closeMenuFunc);
+
+// Close menu when a link is clicked
+mobileLinks.forEach(link => {
+    link.addEventListener('click', closeMenuFunc);
+});
+
 console.log('ACOPERCYL Web initialized.');

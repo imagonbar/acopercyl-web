@@ -104,10 +104,81 @@ nav {
     object-fit: contain;
 }
 
-.nav-links {
+.nav-actions {
     display: flex;
-    gap: 2rem;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Burger Button */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1100;
+}
+
+.burger-menu span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary);
+    border-radius: 10px;
+    transition: var(--transition-standard);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(226, 226, 226, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 2000;
+    transition: right 0.4s ease-in-out;
+}
+
+.mobile-menu-overlay.active {
+    right: 0;
+}
+
+.mobile-menu-content {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    height: 100%;
+}
+
+.close-menu {
+    align-self: flex-end;
+    font-size: 3rem;
+    background: transparent;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.mobile-nav-links {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mobile-nav-links a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-main);
+    font-family: 'Outfit', sans-serif;
 }
 
 .nav-links a {
@@ -150,6 +221,7 @@ nav {
 .hero h1 {
     font-size: 3.5rem;
     line-height: 1.2;
+    margin-top: 2rem; /* Espacio superior para compensar el header */
     margin-bottom: 1.5rem;
     color: var(--text-main);
 }
@@ -224,7 +296,7 @@ section {
     width: 60px;
     height: 4px;
     background: var(--primary);
-    margin: 0 auto;
+    margin: 0 auto 2rem; /* Añadido margen inferior de 2rem */
     border-radius: 2px;
 }
 
@@ -277,16 +349,19 @@ footer img {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .nav-links {
+    .nav-links, .btn-header {
         display: none;
     }
 
+    .burger-menu {
+        display: flex;
+    }
+
     nav {
-        justify-content: center;
-        flex-direction: column;
-        height: auto;
-        padding: 1rem 0;
-        gap: 0.5rem;
+        justify-content: space-between;
+        flex-direction: row; /* Mantener horizontal en móvil */
+        height: 80px;
+        padding: 0;
     }
 
     .hero h1 {
