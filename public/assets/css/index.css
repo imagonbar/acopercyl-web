@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
 
 :root {
-    /* Colors - Brand (Adjusted for WCAG AA Accessibility) */
-    --primary: #118a67; /* Oscurecido ligeramente para contraste 4.5:1 */
-    --primary-light: #17b889;
-    --primary-dark: #0e7a5b;
+    /* Colors - Brand (Official Long COVID Teal) */
+    --primary: #1f9094; 
+    --primary-light: #28b1b6;
+    --primary-dark: #176f72;
     --secondary: #978e88;
     --secondary-light: #b0a8a3;
     --secondary-dark: #7a716c;

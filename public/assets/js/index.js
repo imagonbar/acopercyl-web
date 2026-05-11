@@ -291,4 +291,4 @@ console.log(`
                                         
 %c🚀 ACOPERCYL Web v1.0 - ¡Dando voz al silencio!
 🛠️ Desarrollado por GONBAR SOLUTIONS
-`, "color: #118a67; font-weight: bold; font-family: monospace; font-size: 12px;", "color: #4a454a; font-family: sans-serif; font-size: 14px;");
+`, "color: #1f9094; font-weight: bold; font-family: monospace; font-size: 12px;", "color: #4a454a; font-family: sans-serif; font-size: 14px;");
