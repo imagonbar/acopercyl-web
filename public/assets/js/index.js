@@ -115,6 +115,71 @@ async function loadSiteData() {
             `).join('');
             initFAQ();
         }
+
+        // Populate Objectives
+        const objectivesContainer = document.getElementById('objectives-container');
+        if (objectivesContainer && data.objectives) {
+            objectivesContainer.innerHTML = data.objectives.map(obj => `
+                <div class="card">
+                    <span style="font-size: 2.5rem;">${obj.icon}</span>
+                    <h3>${obj.title}</h3>
+                    <p>${obj.text}</p>
+                </div>
+            `).join('');
+        }
+
+        // Populate Symptoms
+        const symptomsContainer = document.getElementById('symptoms-container');
+        if (symptomsContainer && data.symptoms) {
+            symptomsContainer.innerHTML = data.symptoms.map(sym => `
+                <div class="card">
+                    <span style="font-size: 2rem;">${sym.icon}</span>
+                    <h4>${sym.title}</h4>
+                    <p>${sym.text}</p>
+                </div>
+            `).join('');
+        }
+
+        // Populate Social Media Cards
+        const socialCardsContainer = document.getElementById('social-cards-container');
+        if (socialCardsContainer && data.social) {
+            const socialMap = [
+                { id: 'instagram', label: 'Instagram', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>' },
+                { id: 'x', label: 'X (Twitter)', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733-16zM4 20l6.768-6.768m2.46-2.46L20 4"></path></svg>' },
+                { id: 'facebook', label: 'Facebook', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>' }
+            ];
+
+            socialCardsContainer.innerHTML = socialMap.map(s => `
+                <a href="${data.social[s.id]}" target="_blank" class="social-card" aria-label="${s.label}">
+                    <div class="social-icon-wrapper">${s.icon}</div>
+                    <span class="social-label">${s.label}</span>
+                </a>
+            `).join('');
+        }
+
+        // Update Footer Social and Info
+        if (data.social) {
+            const footerSocials = document.querySelectorAll('.footer-social-icons a');
+            footerSocials.forEach(a => {
+                const label = a.getAttribute('aria-label').toLowerCase();
+                if (label.includes('instagram')) a.href = data.social.instagram;
+                if (label.includes('x')) a.href = data.social.x;
+                if (label.includes('facebook')) a.href = data.social.facebook;
+            });
+        }
+
+        const footerText = document.getElementById('footer-brand-text');
+        if (footerText && data.contact.footer_text) footerText.textContent = data.contact.footer_text;
+
+        const footerEmail = document.getElementById('footer-email');
+        if (footerEmail && data.contact.email) {
+            footerEmail.href = `mailto:${data.contact.email}`;
+            footerEmail.textContent = data.contact.email;
+        }
+
+        const footerLocation = document.getElementById('footer-location');
+        if (footerLocation && data.contact.location) footerLocation.textContent = data.contact.location;
+
     } catch (error) {
         console.error('Error cargando datos del sitio:', error);
     }

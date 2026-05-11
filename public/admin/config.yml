@@ -33,6 +33,26 @@ collections:
               {label: "Pregunta", name: "question", widget: "string"},
               {label: "Respuesta", name: "answer", widget: "text"}
             ]}
+          - {label: "Sección Objetivos", name: "objectives", widget: "list", fields: [
+              {label: "Icono (Emoji)", name: "icon", widget: "string"},
+              {label: "Título", name: "title", widget: "string"},
+              {label: "Descripción", name: "text", widget: "text"}
+            ]}
+          - {label: "Sección Síntomas", name: "symptoms", widget: "list", fields: [
+              {label: "Icono (Emoji)", name: "icon", widget: "string"},
+              {label: "Título", name: "title", widget: "string"},
+              {label: "Descripción", name: "text", widget: "text"}
+            ]}
+          - {label: "Redes Sociales", name: "social", widget: "object", fields: [
+              {label: "Instagram (URL)", name: "instagram", widget: "string"},
+              {label: "X / Twitter (URL)", name: "x", widget: "string"},
+              {label: "Facebook (URL)", name: "facebook", widget: "string"}
+            ]}
+          - {label: "Contacto y Footer", name: "contact", widget: "object", fields: [
+              {label: "Email Principal", name: "email", widget: "string"},
+              {label: "Ubicación / Sede", name: "location", widget: "string"},
+              {label: "Texto Pie de Página", name: "footer_text", widget: "text"}
+            ]}
           - {label: "Legal y Privacidad", name: "privacy", widget: "object", fields: [
               {label: "Contenido Política Privacidad", name: "content", widget: "markdown"}
             ]}
