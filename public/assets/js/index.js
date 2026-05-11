@@ -41,10 +41,12 @@ if (closeBtn) {
     closeBtn.addEventListener('click', closeMenuFunc);
 }
 
-// Close menu when a link is clicked
-mobileLinks.forEach(link => {
-    link.addEventListener('click', closeMenuFunc);
-});
+// Close menu when any link inside the mobile menu is clicked
+if (mobileMenu) {
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenuFunc);
+    });
+}
 
 // FAQ Accordion Logic
 function initFAQ() {
