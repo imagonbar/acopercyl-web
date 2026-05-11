@@ -145,4 +145,12 @@ if (cookieSettingsBtn) {
     });
 }
 
-console.log('ACOPERCYL Web initialized.');
+console.log(`
+%c   _   ___ ___  _____  _______   __ _ 
+  /_\ / __/ _ \| _ \ __| _ \ \ / /| |
+ / _ \ (_| (_) |  _/ _||   /\ V / | |__
+/_/ \_\___\___/|_| |___|_|_\\|_|  |____|
+                                        
+%c🚀 ACOPERCYL Web v1.0 - ¡Dando voz al silencio!
+🛠️ Desarrollado por GONBAR SOLUTIONS
+`, "color: #118a67; font-weight: bold; font-family: monospace; font-size: 12px;", "color: #4a454a; font-family: sans-serif; font-size: 14px;");
