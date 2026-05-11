@@ -15,7 +15,7 @@ collections:
     files:
       - name: "home"
         label: "Página Principal"
-        file: "content/site_data.json"
+        file: "public/content/site_data.json"
         fields:
           - {label: "Sección Hero", name: "hero", widget: "object", fields: [
               {label: "Título", name: "title", widget: "string"},
