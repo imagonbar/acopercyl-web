@@ -834,8 +834,9 @@ footer .footer-bottom {
 /* Footer Social Icons */
 .footer-social-icons {
     display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
+    justify-content: center; /* Centrado solicitado */
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .footer-social-icons a {
