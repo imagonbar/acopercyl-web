@@ -97,6 +97,18 @@ h1, h2, h3, h4, .font-heading {
     padding: 0 2rem;
 }
 
+/* Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--primary-light);
+    z-index: 10001; /* Por encima de todo */
+    transition: width 0.1s ease-out;
+}
+
 /* Header & Navigation */
 header {
     position: fixed;

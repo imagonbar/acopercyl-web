@@ -204,6 +204,17 @@ if (acceptCookiesBtn) {
     });
 }
 
+// Scroll Progress Bar Logic
+window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const progressContainer = document.getElementById("scroll-progress");
+    if (progressContainer) {
+        progressContainer.style.width = scrolled + "%";
+    }
+});
+
 if (cookieSettingsBtn) {
     cookieSettingsBtn.addEventListener('click', () => {
         cookieBanner.style.display = 'block';
