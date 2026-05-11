@@ -425,6 +425,7 @@ section {
 .section-title h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    line-height: 1.2;
 }
 
 .section-title .divider {
@@ -538,8 +539,12 @@ footer .footer-bottom {
     }
 
     .hero h1 {
-        font-size: 2.5rem;
-        margin-top: 0.5rem; /* Reducido para RWD */
+        font-size: 2.4rem;
+        margin-top: 0.5rem;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
     }
 
     .mobile-socio-icon {
@@ -601,8 +606,16 @@ footer .footer-bottom {
     }
 
     .hero h1 {
-        font-size: 1.4rem !important;
+        font-size: 1.8rem;
         margin-top: 0;
+    }
+
+    .section-title h2 {
+        font-size: 1.6rem;
+    }
+
+    .section-title p {
+        font-size: 0.95rem;
     }
 
     .hero p {
@@ -631,11 +644,7 @@ footer .footer-bottom {
     }
 }
 
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-}
+/* Eliminado bloque redundante */
 
 /* Cookie Settings Button */
 .cookie-settings-btn {
