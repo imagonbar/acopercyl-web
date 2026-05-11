@@ -1,0 +1,45 @@
+{
+  "hero": {
+    "title": "Vivir con COVID Persistente no debería hacerse en soledad",
+    "text": "Información, apoyo y recursos para quienes luchan contra el COVID Persistente en Castilla y León. Dando voz al silencio."
+  },
+  "about": {
+    "mission": "Somos una asociación sin ánimo de lucro formada por personas afectadas por COVID Persistente, familiares y colaboradores, comprometidos con mejorar la vida de quienes sufren esta enfermedad.",
+    "vision": "Nacemos ante la necesidad de dar visibilidad a una enfermedad aún poco reconocida, que afecta profundamente a la salud y calidad de vida de miles de personas.",
+    "struggle": "Trabajamos por el reconocimiento sanitario, social, administrativo y laboral del COVID Persistente. Luchamos por la creación de protocolos médicos unificados y unidades de atención específicas y multidisciplinares."
+  },
+  "faq": [
+    {
+      "question": "¿Qué es el COVID Persistente?",
+      "answer": "Es una condición que se define por la permanencia de síntomas tras la fase aguda del COVID-19, o incluso por su reaparición tras un periodo de bienestar, afectando al organismo de manera sistémica. Su presencia es independiente de la gravedad de la infección original, manifestándose tanto en casos leves como graves y en personas de cualquier edad.\n\nEsta patología impacta profundamente en la calidad de vida, alterando el desempeño laboral, social y personal. Se caracteriza por una sintomatología fluctuante que suele agravarse ante el esfuerzo físico o cognitivo, limitando significativamente la capacidad funcional de quienes conviven con ella día a día."
+    },
+    {
+      "question": "¿Es una enfermedad reconocida?",
+      "answer": "Aunque está reconocida por la OMS (Organización Mundial de la Salud), aún existe una falta de reconocimiento pleno en ámbitos administrativos y laborales. Trabajamos activamente para su validación."
+    },
+    {
+      "question": "¿Quién puede formar parte de la asociación?",
+      "answer": "Cualquier persona mayor de edad interesada en los fines de la asociación, ya sea como persona afectada, familiar o colaborador comprometido."
+    },
+    {
+      "question": "¿Cómo puedo pertenecer a la asociación?",
+      "answer": "Puedes ponerte en contacto con nosotros a través del botón \"Hazte Socio\" o escribiéndonos directamente al correo electrónico de la asociación."
+    },
+    {
+      "question": "¿La asociación tiene algún coste?",
+      "answer": "Existe una cuota anual destinada exclusivamente a sufragar los gastos de mantenimiento y las actividades de visibilización y apoyo de la asociación."
+    },
+    {
+      "question": "¿Ofrecéis asesoramiento médico?",
+      "answer": "No sustituimos la atención médica profesional, pero ofrecemos información y orientación basada en experiencias compartidas y recursos sanitarios disponibles."
+    },
+    {
+      "question": "¿Realizáis actividades presenciales?",
+      "answer": "Sí, organizamos encuentros, charlas y actos de visibilización en las diferentes provincias de Castilla y León para fortalecer nuestra red de apoyo."
+    },
+    {
+      "question": "¿En qué zona actuáis?",
+      "answer": "Nuestra sede y ámbito principal de actuación es Castilla y León, aunque colaboramos estrechamente con entidades y federaciones a nivel nacional."
+    }
+  ]
+}

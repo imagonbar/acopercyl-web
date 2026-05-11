@@ -1,29 +1,32 @@
 backend:
   name: git-gateway
-  branch: main # Rama a la que se enviarán los cambios
-
-local_backend: true # Permite probarlo localmente
+  branch: main
+local_backend: true # Añadido para que puedas probarlo en tu PC ahora mismo
 
 media_folder: "assets/img"
 public_folder: "/assets/img"
 
 collections:
-  - name: "pages"
-    label: "Páginas"
+  - name: "content"
+    label: "Contenido del Sitio"
+    delete: false
+    editor:
+      preview: false
     files:
       - name: "home"
-        label: "Página de Inicio"
-        file: "index.html"
+        label: "Página Principal"
+        file: "content/site_data.json"
         fields:
-          - {label: "Título Hero", name: "hero_title", widget: "string"}
-          - {label: "Descripción Hero", name: "hero_text", widget: "text"}
-          - {label: "Sección Nosotros", name: "about_text", widget: "markdown"}
-
-  - name: "faq"
-    label: "Preguntas Frecuentes"
-    folder: "content/faq"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Pregunta", name: "question", widget: "string"}
-      - {label: "Respuesta", name: "answer", widget: "markdown"}
+          - {label: "Sección Hero", name: "hero", widget: "object", fields: [
+              {label: "Título", name: "title", widget: "string"},
+              {label: "Subtítulo", name: "text", widget: "text"}
+            ]}
+          - {label: "Sección Nosotros", name: "about", widget: "object", fields: [
+              {label: "Nuestra Misión", name: "mission", widget: "text"},
+              {label: "Nuestra Visión", name: "vision", widget: "text"},
+              {label: "Nuestra Lucha", name: "struggle", widget: "text"}
+            ]}
+          - {label: "Preguntas Frecuentes", name: "faq", widget: "list", fields: [
+              {label: "Pregunta", name: "question", widget: "string"},
+              {label: "Respuesta", name: "answer", widget: "text"}
+            ]}

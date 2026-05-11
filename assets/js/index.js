@@ -41,22 +41,65 @@ mobileLinks.forEach(link => {
 });
 
 // FAQ Accordion Logic
-const faqQuestions = document.querySelectorAll('.faq-question');
-
-faqQuestions.forEach(question => {
-    question.addEventListener('click', () => {
-        const item = question.parentElement;
+function initFAQ() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        const newQuestion = question.cloneNode(true);
+        question.parentNode.replaceChild(newQuestion, question);
         
-        // Cierra otros items (opcional, para efecto acordeón real)
-        document.querySelectorAll('.faq-item').forEach(otherItem => {
-            if (otherItem !== item) {
-                otherItem.classList.remove('active');
-            }
+        newQuestion.addEventListener('click', () => {
+            const item = newQuestion.parentElement;
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            item.classList.toggle('active');
         });
-
-        item.classList.toggle('active');
     });
-});
+}
+
+// Data Loading Logic
+async function loadSiteData() {
+    const heroTitle = document.getElementById('hero-title');
+    const heroText = document.getElementById('hero-text');
+    const missionText = document.getElementById('about-mission');
+    const visionText = document.getElementById('about-vision');
+    const struggleText = document.getElementById('about-struggle');
+    const faqContainer = document.getElementById('faq-accordion-container');
+
+    try {
+        const response = await fetch('content/site_data.json');
+        const data = await response.json();
+        
+        // Populate Hero
+        if (heroTitle && data.hero.title) heroTitle.textContent = data.hero.title;
+        if (heroText && data.hero.text) heroText.textContent = data.hero.text;
+        
+        // Populate About Cards
+        if (missionText && data.about.mission) missionText.textContent = data.about.mission;
+        if (visionText && data.about.vision) visionText.textContent = data.about.vision;
+        if (struggleText && data.about.struggle) struggleText.textContent = data.about.struggle;
+        
+        // Populate FAQ
+        if (faqContainer && data.faq) {
+            faqContainer.innerHTML = data.faq.map(item => `
+                <div class="faq-item">
+                    <button class="faq-question">${item.question}</button>
+                    <div class="faq-answer">
+                        <p>${item.answer.replace(/\n\n/g, '</p><p>')}</p>
+                    </div>
+                </div>
+            `).join('');
+            initFAQ();
+        }
+    } catch (error) {
+        console.error('Error cargando datos del sitio:', error);
+    }
+}
+
+// Inicializar carga al arrancar
+document.addEventListener('DOMContentLoaded', loadSiteData);
 
 // Cookie Banner Logic
 const cookieBanner = document.getElementById('cookie-banner');
@@ -64,16 +107,20 @@ const acceptCookiesBtn = document.getElementById('accept-cookies');
 const cookieSettingsBtn = document.getElementById('cookie-settings-btn');
 
 if (!localStorage.getItem('cookiesAccepted')) {
-    cookieBanner.style.display = 'block';
+    if (cookieBanner) cookieBanner.style.display = 'block';
 }
 
-acceptCookiesBtn.addEventListener('click', () => {
-    localStorage.setItem('cookiesAccepted', 'true');
-    cookieBanner.style.display = 'none';
-});
+if (acceptCookiesBtn) {
+    acceptCookiesBtn.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'true');
+        cookieBanner.style.display = 'none';
+    });
+}
 
-cookieSettingsBtn.addEventListener('click', () => {
-    cookieBanner.style.display = 'block';
-});
+if (cookieSettingsBtn) {
+    cookieSettingsBtn.addEventListener('click', () => {
+        cookieBanner.style.display = 'block';
+    });
+}
 
 console.log('ACOPERCYL Web initialized.');
