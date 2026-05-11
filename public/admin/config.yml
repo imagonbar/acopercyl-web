@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: main
+  branch: develop
 local_backend: false # Desactivado para usar el modo online en Netlify
 
 media_folder: "assets/img"
