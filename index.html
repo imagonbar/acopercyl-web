@@ -14,56 +14,7 @@
         gtag('config', 'G-XNJPXVKG98');
     </script>
 
-    <script>
-        // Formspree AJAX Submission
-        document.addEventListener('DOMContentLoaded', () => {
-            const contactForm = document.querySelector('.contact-form');
-            const contactCard = document.getElementById('contact-form-card');
-            const formStatus = document.getElementById('form-status');
-            const submitBtn = document.getElementById('submit-btn');
 
-            if (contactForm) {
-                contactForm.addEventListener('submit', async (e) => {
-                    e.preventDefault();
-
-                    const formData = new FormData(contactForm);
-                    submitBtn.disabled = true;
-                    submitBtn.textContent = 'Enviando...';
-
-                    try {
-                        const response = await fetch(contactForm.action, {
-                            method: 'POST',
-                            body: formData,
-                            headers: {
-                                'Accept': 'application/json'
-                            }
-                        });
-
-                        if (response.ok) {
-                            contactCard.style.display = 'none';
-                            formStatus.className = 'form-status-visible';
-                            contactForm.reset();
-                        } else {
-                            alert('Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo.');
-                            submitBtn.disabled = false;
-                            submitBtn.textContent = 'Enviar Mensaje';
-                        }
-                    } catch (error) {
-                        alert('Error de conexión. Revisa tu internet.');
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = 'Enviar Mensaje';
-                    }
-                });
-            }
-
-            window.resetForm = function () {
-                contactCard.style.display = 'block';
-                formStatus.className = 'form-status-hidden';
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Enviar Mensaje';
-            };
-        });
-    </script>
 
     <title>ACOPERCYL | Apoyo y Recursos para COVID Persistente en Castilla y León</title>
     <meta name="description"

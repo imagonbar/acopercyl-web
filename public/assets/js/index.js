@@ -221,6 +221,68 @@ if (cookieSettingsBtn) {
     });
 }
 
+// Formspree AJAX Submission
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.querySelector('.contact-form');
+    const contactCard = document.getElementById('contact-form-card');
+    const formStatus = document.getElementById('form-status');
+    const submitBtn = document.getElementById('submit-btn');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Deshabilitar botón
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Enviando...';
+            }
+
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: JSON.stringify(data),
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    if (contactCard) contactCard.style.display = 'none';
+                    if (formStatus) formStatus.className = 'form-status-visible';
+                    contactForm.reset();
+                } else {
+                    const errorData = await response.json();
+                    console.error('Error de Formspree:', errorData);
+                    alert('Hubo un problema al enviar el mensaje. Por favor, asegúrate de que el formulario está activo en Formspree.');
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Enviar Mensaje';
+                    }
+                }
+            } catch (error) {
+                console.error('Error de conexión:', error);
+                alert('Error de conexión. Por favor, revisa tu internet e inténtalo de nuevo.');
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Enviar Mensaje';
+                }
+            }
+        });
+    }
+
+    // Reset Form Function
+    window.resetForm = function () {
+        if (contactCard) contactCard.style.display = 'block';
+        if (formStatus) formStatus.className = 'form-status-hidden';
+    };
+});
+
+
 console.log(`
 %c   _   ___ ___  _____  _______   __ _ 
   /_\ / __/ _ \| _ \ __| _ \ \ / /| |
