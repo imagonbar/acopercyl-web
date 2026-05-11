@@ -563,32 +563,36 @@ footer .footer-bottom {
 /* Ultra-Mobile Optimizations (< 400px) */
 @media (max-width: 450px) {
     nav {
-        display: grid;
-        grid-template-columns: 1fr auto 1fr; /* 3 columnas para centrado perfecto */
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-        height: 65px;
+        height: 70px;
+        gap: 0.5rem;
     }
 
     .logo {
-        grid-column: 2; /* Logo al centro */
-        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-right: auto;
     }
 
     .logo span {
         display: block;
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         line-height: 1.1;
-        max-width: 150px;
+        font-weight: 700;
+        max-width: 140px;
     }
 
     .logo img {
-        height: 45px !important; /* Aumentado como solicitaste */
+        height: 40px !important;
     }
 
     .nav-actions {
-        grid-column: 3; /* Iconos a la derecha */
-        justify-self: end;
-        gap: 0.4rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
     }
 
     .mobile-socio-icon {
