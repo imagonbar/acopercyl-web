@@ -3,7 +3,7 @@ backend:
   branch: develop
 local_backend: false # Desactivado para usar el modo online en Netlify
 
-media_folder: "assets/img"
+media_folder: "public/assets/img"
 public_folder: "/assets/img"
 
 collections:
