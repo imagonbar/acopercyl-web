@@ -575,7 +575,10 @@ footer .footer-bottom {
     }
 
     .logo span {
-        display: none;
+        display: block;
+        font-size: 0.85rem;
+        line-height: 1.1;
+        max-width: 150px;
     }
 
     .logo img {
