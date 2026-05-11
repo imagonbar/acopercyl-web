@@ -25,7 +25,7 @@
             if (contactForm) {
                 contactForm.addEventListener('submit', async (e) => {
                     e.preventDefault();
-                    
+
                     const formData = new FormData(contactForm);
                     submitBtn.disabled = true;
                     submitBtn.textContent = 'Enviando...';
@@ -56,7 +56,7 @@
                 });
             }
 
-            window.resetForm = function() {
+            window.resetForm = function () {
                 contactCard.style.display = 'block';
                 formStatus.className = 'form-status-hidden';
                 submitBtn.disabled = false;
@@ -65,9 +65,27 @@
         });
     </script>
 
-    <title>ACOPERCYL | Asociación de COVID Persistente de Castilla y León</title>
+    <title>ACOPERCYL | Apoyo y Recursos para COVID Persistente en Castilla y León</title>
     <meta name="description"
-        content="Apoyo, información y recursos para afectados por COVID Persistente en Castilla y León. Dando voz al silencio.">
+        content="Asociación de COVID Persistente de Castilla y León (ACOPERCYL). Información, apoyo mutuo y recursos para afectados por Long COVID. ¡No estás solo, únete a nuestra comunidad!">
+    <meta name="keywords" content="COVID Persistente, Long COVID, Castilla y León, Asociación, Apoyo Afectados, Salud, Valladolid, COVID-19">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.acopercyl.org/">
+    <meta property="og:title" content="ACOPERCYL | Asociación de COVID Persistente de Castilla y León">
+    <meta property="og:description" content="Dando voz al silencio. Apoyo y recursos para afectados por COVID Persistente en Castilla y León.">
+    <meta property="og:image" content="https://www.acopercyl.org/assets/img/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.acopercyl.org/">
+    <meta property="twitter:title" content="ACOPERCYL | Asociación de COVID Persistente de Castilla y León">
+    <meta property="twitter:description" content="Dando voz al silencio. Apoyo y recursos para afectados por COVID Persistente en Castilla y León.">
+    <meta property="twitter:image" content="https://www.acopercyl.org/assets/img/logo.png">
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://www.acopercyl.org/">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -437,7 +455,8 @@
                                 <textarea id="message" name="mensaje" rows="5"
                                     placeholder="Cuéntanos en qué podemos ayudarte..." required></textarea>
                             </div>
-                            <button type="submit" id="submit-btn" class="btn btn-primary btn-block">Enviar Mensaje</button>
+                            <button type="submit" id="submit-btn" class="btn btn-primary btn-block">Enviar
+                                Mensaje</button>
                         </form>
                     </div>
 
@@ -446,7 +465,8 @@
                         <div class="status-icon">✅</div>
                         <h3>¡Mensaje enviado!</h3>
                         <p>Gracias por contactar con ACOPERCYL. Nos pondremos en contacto contigo lo antes posible.</p>
-                        <button onclick="resetForm()" class="btn btn-secondary btn-sm" style="margin-top: 1rem;">Enviar otro mensaje</button>
+                        <button onclick="resetForm()" class="btn btn-secondary btn-sm" style="margin-top: 1rem;">Enviar
+                            otro mensaje</button>
                     </div>
                 </div>
             </div>
@@ -513,7 +533,7 @@
                 <p>&copy; 2026 ACOPERCYL <a href="https://www.acopercyl.org"
                         style="color: var(--primary-light); text-decoration: none;">www.acopercyl.org</a></p>
                 <p style="font-size: 0.75rem; opacity: 0.7; margin-top: 0.5rem;">
-                    CIF: G24914599 | Sede: Valladolid (47010) - España
+                    CIF: G24914599 | Registro: Nº 0006334 (Sección PRIMERA) | Sede: Valladolid (47010)
                 </p>
                 <p style="margin-top: 1rem;">Creado por GONBAR SOLUTIONS</p>
             </div>

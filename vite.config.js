@@ -2,11 +2,8 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   server: {
-    host: 'covid-persistente-web.test',
+    host: true, // Esto permitirá localhost y tu IP local
     port: 5173,
     open: true,
-    hmr: {
-        host: 'covid-persistente-web.test'
-    }
   }
 });

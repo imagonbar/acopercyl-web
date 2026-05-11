@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# No indexar el panel de administración
+Disallow: /admin/
+Disallow: /config.yml
+
+# Ubicación del sitemap
+Sitemap: https://www.acopercyl.org/sitemap.xml
