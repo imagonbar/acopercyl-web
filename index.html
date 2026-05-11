@@ -13,6 +13,7 @@
         gtag('js', new Date());
         gtag('config', 'G-XNJPXVKG98');
     </script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 
 
@@ -344,6 +345,13 @@
                                 <textarea id="message" name="mensaje" rows="5"
                                     placeholder="Cuéntanos en qué podemos ayudarte..." required></textarea>
                             </div>
+
+                            <!-- Honeypot field -->
+                            <input type="text" name="_gotcha" style="display:none">
+
+                            <!-- Cloudflare Turnstile Widget -->
+                            <div class="cf-turnstile" data-sitekey="0x4AAAAAADNdajngDlP6PrKi" style="margin-bottom: 1rem;"></div>
+
                             <button type="submit" id="submit-btn" class="btn btn-primary btn-block">Enviar
                                 Mensaje</button>
                         </form>

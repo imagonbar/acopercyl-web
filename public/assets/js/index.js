@@ -239,14 +239,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData.entries());
+            
+            // Verificación manual opcional del token de Turnstile
+            const turnstileResponse = formData.get('cf-turnstile-response');
+            if (!turnstileResponse && document.querySelector('.cf-turnstile')) {
+                alert('Por favor, completa la verificación de seguridad.');
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Enviar Mensaje';
+                }
+                return;
+            }
 
             try {
                 const response = await fetch(contactForm.action, {
                     method: 'POST',
-                    body: JSON.stringify(data),
+                    body: formData,
                     headers: {
-                        'Content-Type': 'application/json',
                         'Accept': 'application/json'
                     }
                 });
