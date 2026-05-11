@@ -6,19 +6,43 @@
   "about": {
     "mission": "Somos una asociación sin ánimo de lucro formada por personas afectadas por COVID Persistente, familiares y colaboradores, comprometidos con mejorar la vida de quienes sufren esta enfermedad.",
     "vision": "Nacemos ante la necesidad de dar visibilidad a una enfermedad aún poco reconocida, que afecta profundamente a la salud y calidad de vida de miles de personas.",
-    "struggle": "Trabajamos por el reconocimiento sanitario, social, administrativo y laboral del COVID Persistente. Luchamos por la creación de protocolos médicos unificados y unidades de atención específicas y mutlidisciplinares."
+    "struggle": "Trabajamos por el reconocimiento sanitario, social, administrativo y laboral del COVID Persistente. Luchamos por la creación de protocolos médicos unificados y unidades de atención específicas y multidisciplinares."
   },
   "community": {
-    "text": "Si quieres formar parte de nuestra comunidad, recibir apoyo o colaborar con nosotros, no dudes en contactarnos."
+    "text": "Conecta con nosotros a través de nuestras plataformas oficiales."
   },
   "faq": [
     {
       "question": "¿Qué es el COVID Persistente?",
-      "answer": "La OMS lo define como la continuación o desarrollo de nuevos síntomas 3 meses después de la infección inicial por SARS-CoV-2, con síntomas que duran al menos 2 meses y no pueden explicarse por un diagnóstico alternativo."
+      "answer": "Es una condición que se define por la permanencia de síntomas tras la fase aguda del COVID-19, o incluso por su reaparición tras un periodo de bienestar, afectando al organismo de manera sistémica. Su presencia es independiente de la gravedad de la infección original, manifestándose tanto en casos leves como graves y en personas de cualquier edad.\n\nEsta patología impacta profundamente en la calidad de vida, alterando el desempeño laboral, social y personal. Se caracteriza por una sintomatología fluctuante que suele agravarse ante el esfuerzo físico o cognitivo, limitando significativamente la capacidad funcional de quienes conviven con ella día a día."
     },
     {
-      "question": "¿Cómo puedo asociarme?",
-      "answer": "Puedes contactar con nosotros a través del formulario de contacto o enviándonos un correo electrónico. Te informaremos de todos los pasos necesarios para formar parte de ACOPERCYL."
+      "question": "¿Es una enfermedad reconocida?",
+      "answer": "Aunque está reconocida por la OMS (Organización Mundial de la Salud), aún existe una falta de reconocimiento pleno en ámbitos administrativos y laborales. Trabajamos activamente para su validación."
+    },
+    {
+      "question": "¿Quién puede formar parte de la asociación?",
+      "answer": "Cualquier persona mayor de edad interesada en los fines de la asociación, ya sea como persona afectada, familiar o colaborador comprometido."
+    },
+    {
+      "question": "¿Cómo puedo pertenecer a la asociación?",
+      "answer": "Puedes ponerte en contacto con nosotros a través del botón \"Hazte Socio\" o escribiéndonos directamente al correo electrónico de la asociación."
+    },
+    {
+      "question": "¿La asociación tiene algún coste?",
+      "answer": "Existe una cuota anual destinada exclusivamente a sufragar los gastos de mantenimiento y las actividades de visibilización y apoyo de la asociación."
+    },
+    {
+      "question": "¿Ofrecéis asesoramiento médico?",
+      "answer": "No sustituimos la atención médica profesional, pero ofrecemos información y orientación basada en experiencias compartidas y recursos sanitarios disponibles."
+    },
+    {
+      "question": "¿Realizáis actividades presenciales?",
+      "answer": "Sí, organizamos encuentros, charlas y actos de visibilización en las diferentes provincias de Castilla y León para fortalecer nuestra red de apoyo."
+    },
+    {
+      "question": "¿En qué zona actuáis?",
+      "answer": "Nuestra sede y ámbito principal de actuación es Castilla y León, aunque colaboramos estrechamente con entidades y federaciones a nivel nacional."
     }
   ],
   "objectives": [
@@ -81,6 +105,6 @@
     "footer_text": "Asociación de COVID Persistente de Castilla y León. Trabajando por el reconocimiento y apoyo integral de los afectados."
   },
   "privacy": {
-    "content": "### Protección de Datos\n\nDe conformidad con el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), te informamos que los datos que nos facilites serán tratados por **ACOPERCYL** con la finalidad de gestionar tu solicitud de información o asociación.\n\n**Derechos:** Puedes ejercer tus derechos de acceso, rectificación, supresión y otros enviando un correo a afectadoscovidpersistentecyl@gmail.com."
+    "content": "### Responsable del Tratamiento\n\n**Entidad:** ASOCIACIÓN DE COVID PERSISTENTE DE CASTILLA Y LEÓN (ACOPERCYL)\n**CIF:** G24914599\n**Registro:** Nº 0006334 (Sección PRIMERA)\n**Email:** afectadoscovidpersistentecyl@gmail.com\n\n### Finalidad\n\nLos datos recogidos a través del formulario de contacto se utilizarán exclusivamente para atender su solicitud de información o tramitar su alta como socio de la asociación. No se utilizarán para fines publicitarios sin su consentimiento expreso.\n\n### Derechos\n\nUsted tiene derecho a acceder, rectificar y suprimir sus datos, así como otros derechos explicados en la información adicional que puede solicitar por correo electrónico."
   }
 }
