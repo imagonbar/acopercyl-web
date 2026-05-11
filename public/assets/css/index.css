@@ -624,15 +624,17 @@ footer .footer-bottom {
     }
 
     .cta-group {
-        flex-direction: column !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrar botones */
         width: 100%;
         gap: 0.75rem;
     }
 
     .btn {
-        width: 100% !important;
-        min-width: 0 !important;
-        padding: 0.6rem 1rem;
+        width: auto !important; /* Ajuste al contenido para poder centrar */
+        min-width: 200px !important;
+        padding: 0.8rem 1.5rem;
     }
 
     .container {
@@ -745,7 +747,7 @@ footer .footer-bottom {
 .faq-answer p {
     margin: 0;
     color: var(--text-muted);
-    font-size: 1rem;
+    font-size: 0.85rem; /* Reducido según petición */
     text-align: justify;
 }
 
@@ -782,11 +784,22 @@ footer .footer-bottom {
 
 @media (max-width: 992px) {
     #comunidad .flex-center {
-        flex-wrap: wrap; /* Permitimos envolver en tablets/móviles */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Cuadrícula de 3 elementos */
+        gap: 1rem;
     }
     #comunidad .social-card {
-        flex: 1 1 100%; /* Ocupan todo el ancho en móviles */
+        flex-direction: column; /* Icono arriba, texto abajo */
+        padding: 1rem 0.5rem;
+        gap: 0.5rem;
         max-width: 100%;
+    }
+    #comunidad .social-label {
+        font-size: 0.7rem; /* Texto más pequeño para que quepa */
+    }
+    #comunidad .social-icon-wrapper {
+        width: 40px;
+        height: 40px;
     }
 }
 
