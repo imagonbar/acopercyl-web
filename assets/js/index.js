@@ -19,21 +19,27 @@ const closeBtn = document.getElementById('close-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
 
-burgerBtn.addEventListener('click', () => {
-    mobileMenu.classList.add('active');
-    mobileMenu.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    closeBtn.focus(); // Mejora de accesibilidad: pone el foco en el botón de cerrar
-});
+if (burgerBtn && mobileMenu) {
+    burgerBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('active');
+        mobileMenu.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        if (closeBtn) closeBtn.focus();
+    });
+}
 
 const closeMenuFunc = () => {
-    mobileMenu.classList.remove('active');
-    mobileMenu.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = 'auto';
-    burgerBtn.focus(); // Devuelve el foco al botón de hamburguesa
+    if (mobileMenu) {
+        mobileMenu.classList.remove('active');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = 'auto';
+        if (burgerBtn) burgerBtn.focus();
+    }
 };
 
-closeBtn.addEventListener('click', closeMenuFunc);
+if (closeBtn) {
+    closeBtn.addEventListener('click', closeMenuFunc);
+}
 
 // Close menu when a link is clicked
 mobileLinks.forEach(link => {
@@ -66,6 +72,8 @@ async function loadSiteData() {
     const missionText = document.getElementById('about-mission');
     const visionText = document.getElementById('about-vision');
     const struggleText = document.getElementById('about-struggle');
+    const communityText = document.getElementById('community-text');
+    const privacyContent = document.getElementById('privacy-dynamic-content');
     const faqContainer = document.getElementById('faq-accordion-container');
 
     try {
@@ -80,6 +88,18 @@ async function loadSiteData() {
         if (missionText && data.about.mission) missionText.textContent = data.about.mission;
         if (visionText && data.about.vision) visionText.textContent = data.about.vision;
         if (struggleText && data.about.struggle) struggleText.textContent = data.about.struggle;
+
+        // Populate Community
+        if (communityText && data.community.text) communityText.textContent = data.community.text;
+
+        // Populate Privacy Policy (Simple Markdown to HTML)
+        if (privacyContent && data.privacy.content) {
+            privacyContent.innerHTML = data.privacy.content
+                .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+                .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+                .replace(/\*\*(.*)\*\*/gim, '<strong>$1</strong>')
+                .replace(/\n/gim, '<br>');
+        }
         
         // Populate FAQ
         if (faqContainer && data.faq) {

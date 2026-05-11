@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: main
-local_backend: true # Añadido para que puedas probarlo en tu PC ahora mismo
+local_backend: false # Desactivado para usar el modo online en Netlify
 
 media_folder: "assets/img"
 public_folder: "/assets/img"
@@ -26,7 +26,13 @@ collections:
               {label: "Nuestra Visión", name: "vision", widget: "text"},
               {label: "Nuestra Lucha", name: "struggle", widget: "text"}
             ]}
+          - {label: "Sección Comunidad", name: "community", widget: "object", fields: [
+              {label: "Texto Invitación", name: "text", widget: "string"}
+            ]}
           - {label: "Preguntas Frecuentes", name: "faq", widget: "list", fields: [
               {label: "Pregunta", name: "question", widget: "string"},
               {label: "Respuesta", name: "answer", widget: "text"}
+            ]}
+          - {label: "Legal y Privacidad", name: "privacy", widget: "object", fields: [
+              {label: "Contenido Política Privacidad", name: "content", widget: "markdown"}
             ]}

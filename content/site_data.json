@@ -8,6 +8,12 @@
     "vision": "Nacemos ante la necesidad de dar visibilidad a una enfermedad aún poco reconocida, que afecta profundamente a la salud y calidad de vida de miles de personas.",
     "struggle": "Trabajamos por el reconocimiento sanitario, social, administrativo y laboral del COVID Persistente. Luchamos por la creación de protocolos médicos unificados y unidades de atención específicas y multidisciplinares."
   },
+  "community": {
+    "text": "Conecta con nosotros a través de nuestras plataformas oficiales."
+  },
+  "privacy": {
+    "content": "### Responsable del Tratamiento\n\n**Entidad:** ASOCIACIÓN DE COVID PERSISTENTE DE CASTILLA Y LEÓN (ACOPERCYL)\n**CIF:** G24914599\n**Registro:** Nº 0006334 (Sección PRIMERA)\n**Email:** afectadoscovidpersistentecyl@gmail.com\n\n### Finalidad\n\nLos datos recogidos a través del formulario de contacto se utilizarán exclusivamente para atender su solicitud de información o tramitar su alta como socio de la asociación. No se utilizarán para fines publicitarios sin su consentimiento expreso.\n\n### Derechos\n\nUsted tiene derecho a acceder, rectificar y suprimir sus datos, así como otros derechos explicados en la información adicional que puede solicitar por correo electrónico."
+  },
   "faq": [
     {
       "question": "¿Qué es el COVID Persistente?",
