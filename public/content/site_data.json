@@ -1,16 +1,65 @@
 {
-  "hero": {
-    "title": "Vivir con COVID Persistente no debería hacerse en soledad",
-    "text": "Información, apoyo y recursos para quienes luchan contra el COVID Persistente en Castilla y León. Dando voz al silencio."
+  "contact": {
+    "email": "afectadoscovidpersistentecyl@gmail.com",
+    "location": "Castilla y León, España",
+    "footer_text": "Asociación de COVID Persistente de Castilla y León. Trabajando por el reconocimiento y apoyo integral de los afectados."
+  },
+  "privacy": {
+    "content": "### Responsable del Tratamiento\n\n**Entidad:** ASOCIACIÓN DE COVID PERSISTENTE DE CASTILLA Y LEÓN (ACOPERCYL)\n**CIF:** G24914599\n**Registro:** Nº 0006334 (Sección PRIMERA)\n**Email:** afectadoscovidpersistentecyl@gmail.com\n\n### Finalidad\n\nLos datos recogidos a través del formulario de contacto se utilizarán exclusivamente para atender su solicitud de información o tramitar su alta como socio de la asociación. No se utilizarán para fines publicitarios sin su consentimiento expreso.\n\n### Derechos\n\nUsted tiene derecho a acceder, rectificar y suprimir sus datos, así como otros derechos explicados en la información adicional que puede solicitar por correo electrónico."
+  },
+  "community": {
+    "text": "Conecta con nosotros a través de nuestras plataformas oficiales."
+  },
+  "symptoms": [
+    {
+      "icon": "🔋",
+      "title": "Fatiga Extrema",
+      "text": "Un agotamiento profundo que no mejora con el descanso y limita la actividad diaria."
+    },
+    {
+      "icon": "🧠",
+      "title": "Niebla Mental",
+      "text": "Dificultades cognitivas, problemas de memoria y falta de concentración."
+    },
+    {
+      "icon": "🫁",
+      "title": "Problemas Respiratorios",
+      "text": "Disnea o sensación de falta de aire persistente tras realizar esfuerzos mínimos."
+    },
+    {
+      "icon": "❤️",
+      "title": "Taquicardias",
+      "text": "Alteraciones del ritmo cardíaco y problemas cardiovasculares recurrentes."
+    },
+    {
+      "icon": "🦴",
+      "title": "Dolor Articular",
+      "text": "Dolores musculares y articulares persistentes sin causa aparente."
+    },
+    {
+      "icon": "💤",
+      "title": "Alteraciones del Sueño",
+      "text": "Insomnio o sueño no reparador que agrava el resto de la sintomatología."
+    }
+  ],
+  "social": {
+    "instagram": "https://www.instagram.com/acopercyl/",
+    "x": "https://x.com/Covidpersistcyl",
+    "facebook": "https://www.facebook.com/groups/512722889776789/"
   },
   "about": {
     "mission": "Somos una asociación sin ánimo de lucro formada por personas afectadas por COVID Persistente, familiares y colaboradores, comprometidos con mejorar la vida de quienes sufren esta enfermedad.",
     "vision": "Nacemos ante la necesidad de dar visibilidad a una enfermedad aún poco reconocida, que afecta profundamente a la salud y calidad de vida de miles de personas.",
     "struggle": "Trabajamos por el reconocimiento sanitario, social, administrativo y laboral del COVID Persistente. Luchamos por la creación de protocolos médicos unificados y unidades de atención específicas y multidisciplinares."
   },
-  "community": {
-    "text": "Conecta con nosotros a través de nuestras plataformas oficiales."
-  },
+  "news": [
+    {
+      "title": "El PSOE pedirá la reapertura de la unidad especial de referencia en covid persistente",
+      "url": "https://www.elnortedecastilla.es/castillayleon/psoe-pedira-reapertura-unidad-especial-referencia-covid-20260513191507-nt.html",
+      "image": "/assets/img/logo.png",
+      "date": "2026-05-10"
+    }
+  ],
   "faq": [
     {
       "question": "¿Qué es el COVID Persistente?",
@@ -62,81 +111,8 @@
       "text": "Sensibilizamos a la sociedad y a las instituciones sobre la realidad de nuestra condición. Damos voz a quienes el silencio ha ocultado."
     }
   ],
-  "symptoms": [
-    {
-      "icon": "🔋",
-      "title": "Fatiga Extrema",
-      "text": "Un agotamiento profundo que no mejora con el descanso y limita la actividad diaria."
-    },
-    {
-      "icon": "🧠",
-      "title": "Niebla Mental",
-      "text": "Dificultades cognitivas, problemas de memoria y falta de concentración."
-    },
-    {
-      "icon": "🫁",
-      "title": "Problemas Respiratorios",
-      "text": "Disnea o sensación de falta de aire persistente tras realizar esfuerzos mínimos."
-    },
-    {
-      "icon": "❤️",
-      "title": "Taquicardias",
-      "text": "Alteraciones del ritmo cardíaco y problemas cardiovasculares recurrentes."
-    },
-    {
-      "icon": "🦴",
-      "title": "Dolor Articular",
-      "text": "Dolores musculares y articulares persistentes sin causa aparente."
-    },
-    {
-      "icon": "💤",
-      "title": "Alteraciones del Sueño",
-      "text": "Insomnio o sueño no reparador que agrava el resto de la sintomatología."
-    }
-  ],
-  "social": {
-    "instagram": "https://www.instagram.com/acopercyl/",
-    "x": "https://x.com/Covidpersistcyl",
-    "facebook": "https://www.facebook.com/groups/512722889776789/"
-  },
-  "contact": {
-    "email": "afectadoscovidpersistentecyl@gmail.com",
-    "location": "Castilla y León, España",
-    "footer_text": "Asociación de COVID Persistente de Castilla y León. Trabajando por el reconocimiento y apoyo integral de los afectados."
-  },
-  "privacy": {
-    "content": "### Responsable del Tratamiento\n\n**Entidad:** ASOCIACIÓN DE COVID PERSISTENTE DE CASTILLA Y LEÓN (ACOPERCYL)\n**CIF:** G24914599\n**Registro:** Nº 0006334 (Sección PRIMERA)\n**Email:** afectadoscovidpersistentecyl@gmail.com\n\n### Finalidad\n\nLos datos recogidos a través del formulario de contacto se utilizarán exclusivamente para atender su solicitud de información o tramitar su alta como socio de la asociación. No se utilizarán para fines publicitarios sin su consentimiento expreso.\n\n### Derechos\n\nUsted tiene derecho a acceder, rectificar y suprimir sus datos, así como otros derechos explicados en la información adicional que puede solicitar por correo electrónico."
-  },
-  "news": [
-    {
-      "title": "La importancia del reconocimiento del COVID Persistente",
-      "url": "https://www.ejemplo.com/noticia1",
-      "image": "/assets/img/logo.png",
-      "date": "2026-05-10"
-    },
-    {
-      "title": "Encuentro de afectados en Valladolid",
-      "url": "https://www.ejemplo.com/noticia2",
-      "image": "/assets/img/logo.png",
-      "date": "2026-05-08"
-    },
-    {
-      "title": "Participación en el Congreso Nacional de COVID Persistente",
-      "url": "https://www.ejemplo.com/noticia4",
-      "image": "/assets/img/logo.png",
-      "date": "2026-04-20"
-    },
-    {
-      "title": "Entrevista en RTVCyL: La realidad de los afectados",
-      "url": "https://www.ejemplo.com/noticia5",
-      "image": "/assets/img/logo.png",
-      "date": "2026-04-15"
-    },
-    {
-      "title": "Nueva delegación de la asociación en León",
-      "url": "https://www.ejemplo.com/noticia6",
-      "image": "/assets/img/logo.png",
-      "date": "2026-04-01"
-    }
-  ]
+  "hero": {
+    "title": "Vivir con COVID Persistente no debería hacerse en soledad",
+    "text": "Información, apoyo y recursos para quienes luchan contra el COVID Persistente en Castilla y León. Dando voz al silencio."
+  }
 }
