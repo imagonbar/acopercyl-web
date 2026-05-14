@@ -29,7 +29,7 @@
     <meta property="og:title" content="ACOPERCYL | Asociación de COVID Persistente de Castilla y León">
     <meta property="og:description"
         content="Dando voz al silencio. Apoyo y recursos para afectados por COVID Persistente en Castilla y León.">
-    <meta property="og:image" content="https://www.acopercyl.org/assets/img/logo.png">
+    <meta property="og:image" content="https://www.acopercyl.org/assets/img/share-banner.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -37,7 +37,7 @@
     <meta property="twitter:title" content="ACOPERCYL | Asociación de COVID Persistente de Castilla y León">
     <meta property="twitter:description"
         content="Dando voz al silencio. Apoyo y recursos para afectados por COVID Persistente en Castilla y León.">
-    <meta property="twitter:image" content="https://www.acopercyl.org/assets/img/logo.png">
+    <meta property="twitter:image" content="https://www.acopercyl.org/assets/img/share-banner.png">
 
     <!-- Canonical Tag -->
     <link rel="canonical" href="https://www.acopercyl.org/">
@@ -55,6 +55,33 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/img/logo.png">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <!-- Schema.org (Datos Estructurados) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalOrganization",
+      "name": "ACOPERCYL - Asociación de COVID Persistente de Castilla y León",
+      "url": "https://www.acopercyl.org/",
+      "logo": "https://www.acopercyl.org/assets/img/logo.png",
+      "sameAs": [
+        "https://www.instagram.com/acopercyl/",
+        "https://x.com/Covidpersistcyl",
+        "https://www.facebook.com/groups/512722889776789/"
+      ],
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Castilla y León"
+      },
+      "serviceArea": ["Valladolid", "León", "Burgos", "Salamanca", "Zamora", "Palencia", "Ávila", "Segovia", "Soria"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Valladolid",
+        "addressRegion": "Castilla y León",
+        "addressCountry": "ES"
+      }
+    }
+    </script>
 </head>
 
 <body id="inicio">
@@ -76,6 +103,7 @@
                     <li><a href="#objetivos">Objetivos</a></li>
                     <li><a href="#sintomas">Síntomas</a></li>
                     <li><a href="#comunidad">Comunidad</a></li>
+                    <li><a href="#noticias">Noticias</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
@@ -108,6 +136,7 @@
                     <li><a href="#objetivos">Objetivos</a></li>
                     <li><a href="#sintomas">Síntomas</a></li>
                     <li><a href="#comunidad">Comunidad</a></li>
+                    <li><a href="#noticias">Noticias</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
@@ -305,7 +334,24 @@
                 </div>
             </div>
         </section>
+        
+        <section id="noticias">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Noticias y Prensa</h2>
+                    <div class="divider"></div>
+                    <p>Mantente al día con las últimas novedades y apariciones en medios.</p>
+                </div>
 
+                <div class="news-grid" id="news-container">
+                    <!-- Contenido dinámico cargado con lazy loading -->
+                </div>
+
+                <div class="news-actions" id="news-actions" style="display: none; justify-content: center; margin-top: 3rem;">
+                    <a href="noticias.html" target="_blank" class="btn btn-secondary" aria-label="Ver todas las noticias de la asociación">Ver todas las noticias</a>
+                </div>
+            </div>
+        </section>
 
         <section id="faq" class="bg-alt">
             <div class="container">
@@ -411,6 +457,7 @@
                         <li><a href="#objetivos">Objetivos</a></li>
                         <li><a href="#sintomas">Síntomas</a></li>
                         <li><a href="#comunidad">Comunidad</a></li>
+                        <li><a href="#noticias">Noticias</a></li>
                         <li><a href="#faq">FAQ</a></li>
                         <li><a href="politica-privacidad.html">Privacidad y Cookies</a></li>
                     </ul>

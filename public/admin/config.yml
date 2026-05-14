@@ -1,58 +1,55 @@
 backend:
   name: git-gateway
   branch: main
-local_backend: false # Desactivado para usar el modo online en Netlify
+
+# Configuración explícita para modo local
+local_backend:
+  url: http://localhost:8081/api/v1
 
 media_folder: "public/assets/img"
 public_folder: "/assets/img"
 
 collections:
-  - name: "content"
-    label: "Contenido del Sitio"
+  - name: "config"
+    label: "⚙️ Configuración Web"
     delete: false
-    editor:
-      preview: false
     files:
       - name: "home"
-        label: "Página Principal"
+        label: "Contenido General"
         file: "public/content/site_data.json"
         fields:
-          - {label: "Sección Hero", name: "hero", widget: "object", fields: [
+          - {label: "Cabecera (Hero)", name: "hero", widget: "object", fields: [
               {label: "Título", name: "title", widget: "string"},
-              {label: "Subtítulo", name: "text", widget: "text"}
+              {label: "Texto", name: "text", widget: "text"}
             ]}
-          - {label: "Sección Nosotros", name: "about", widget: "object", fields: [
-              {label: "Nuestra Misión", name: "mission", widget: "text"},
-              {label: "Nuestra Visión", name: "vision", widget: "text"},
-              {label: "Nuestra Lucha", name: "struggle", widget: "text"}
-            ]}
-          - {label: "Sección Comunidad", name: "community", widget: "object", fields: [
-              {label: "Texto Invitación", name: "text", widget: "string"}
-            ]}
-          - {label: "Preguntas Frecuentes", name: "faq", widget: "list", fields: [
+          - {label: "FAQ", name: "faq", widget: "list", fields: [
               {label: "Pregunta", name: "question", widget: "string"},
               {label: "Respuesta", name: "answer", widget: "text"}
             ]}
-          - {label: "Sección Objetivos", name: "objectives", widget: "list", fields: [
-              {label: "Icono (Emoji)", name: "icon", widget: "string"},
-              {label: "Título", name: "title", widget: "string"},
-              {label: "Descripción", name: "text", widget: "text"}
-            ]}
-          - {label: "Sección Síntomas", name: "symptoms", widget: "list", fields: [
-              {label: "Icono (Emoji)", name: "icon", widget: "string"},
-              {label: "Título", name: "title", widget: "string"},
-              {label: "Descripción", name: "text", widget: "text"}
-            ]}
           - {label: "Redes Sociales", name: "social", widget: "object", fields: [
-              {label: "Instagram (URL)", name: "instagram", widget: "string"},
-              {label: "X / Twitter (URL)", name: "x", widget: "string"},
-              {label: "Facebook (URL)", name: "facebook", widget: "string"}
+              {label: "Instagram", name: "instagram", widget: "string"},
+              {label: "X", name: "x", widget: "string"},
+              {label: "Facebook", name: "facebook", widget: "string"}
             ]}
-          - {label: "Contacto y Footer", name: "contact", widget: "object", fields: [
-              {label: "Email Principal", name: "email", widget: "string"},
-              {label: "Ubicación / Sede", name: "location", widget: "string"},
-              {label: "Texto Pie de Página", name: "footer_text", widget: "text"}
+          - {label: "Contacto", name: "contact", widget: "object", fields: [
+              {label: "Email", name: "email", widget: "string"},
+              {label: "Ubicación", name: "location", widget: "string"}
             ]}
-          - {label: "Legal y Privacidad", name: "privacy", widget: "object", fields: [
-              {label: "Contenido Política Privacidad", name: "content", widget: "markdown"}
-            ]}
+
+  - name: "noticias_panel"
+    label: "📰 Noticias y Prensa"
+    delete: false
+    files:
+      - name: "archivo"
+        label: "Archivo de Noticias"
+        file: "public/content/site_data.json"
+        fields:
+          - label: "Listado de Noticias"
+            name: "news"
+            widget: "list"
+            summary: '{{title}} ({{date}})'
+            fields:
+              - {label: "Título", name: "title", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+              - {label: "Imagen", name: "image", widget: "image"}
+              - {label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD"}

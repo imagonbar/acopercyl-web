@@ -106,5 +106,37 @@
   },
   "privacy": {
     "content": "### Responsable del Tratamiento\n\n**Entidad:** ASOCIACIÓN DE COVID PERSISTENTE DE CASTILLA Y LEÓN (ACOPERCYL)\n**CIF:** G24914599\n**Registro:** Nº 0006334 (Sección PRIMERA)\n**Email:** afectadoscovidpersistentecyl@gmail.com\n\n### Finalidad\n\nLos datos recogidos a través del formulario de contacto se utilizarán exclusivamente para atender su solicitud de información o tramitar su alta como socio de la asociación. No se utilizarán para fines publicitarios sin su consentimiento expreso.\n\n### Derechos\n\nUsted tiene derecho a acceder, rectificar y suprimir sus datos, así como otros derechos explicados en la información adicional que puede solicitar por correo electrónico."
-  }
+  },
+  "news": [
+    {
+      "title": "La importancia del reconocimiento del COVID Persistente",
+      "url": "https://www.ejemplo.com/noticia1",
+      "image": "/assets/img/logo.png",
+      "date": "2026-05-10"
+    },
+    {
+      "title": "Encuentro de afectados en Valladolid",
+      "url": "https://www.ejemplo.com/noticia2",
+      "image": "/assets/img/logo.png",
+      "date": "2026-05-08"
+    },
+    {
+      "title": "Participación en el Congreso Nacional de COVID Persistente",
+      "url": "https://www.ejemplo.com/noticia4",
+      "image": "/assets/img/logo.png",
+      "date": "2026-04-20"
+    },
+    {
+      "title": "Entrevista en RTVCyL: La realidad de los afectados",
+      "url": "https://www.ejemplo.com/noticia5",
+      "image": "/assets/img/logo.png",
+      "date": "2026-04-15"
+    },
+    {
+      "title": "Nueva delegación de la asociación en León",
+      "url": "https://www.ejemplo.com/noticia6",
+      "image": "/assets/img/logo.png",
+      "date": "2026-04-01"
+    }
+  ]
 }
