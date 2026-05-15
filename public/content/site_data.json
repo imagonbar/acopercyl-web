@@ -1,30 +1,15 @@
 {
-  "hero": {
-    "title": "Vivir con COVID Persistente no debería hacerse en soledad",
-    "text": "Información, apoyo y recursos para quienes luchan contra el COVID Persistente en Castilla y León. Dando voz al silencio."
+  "contact": {
+    "email": "afectadoscovidpersistentecyl@gmail.com",
+    "location": "Castilla y León, España",
+    "footer_text": "Asociación de COVID Persistente de Castilla y León. Trabajando por el reconocimiento y apoyo integral de los afectados."
   },
-  "about": {
-    "mission": "Somos una asociación sin ánimo de lucro formada por personas afectadas por COVID Persistente, familiares y colaboradores, comprometidos con mejorar la vida de quienes sufren esta enfermedad.",
-    "vision": "Nacemos ante la necesidad de dar visibilidad a una enfermedad aún poco reconocida, que afecta profundamente a la salud y calidad de vida de miles de personas.",
-    "struggle": "Trabajamos por el reconocimiento sanitario, social, administrativo y laboral del COVID Persistente. Luchamos por la creación de protocolos médicos unificados y unidades de atención específicas y multidisciplinares."
+  "privacy": {
+    "content": "### Responsable del Tratamiento\n\n**Entidad:** ASOCIACIÓN DE COVID PERSISTENTE DE CASTILLA Y LEÓN (ACOPERCYL)\n**CIF:** G24914599\n**Registro:** Nº 0006334 (Sección PRIMERA)\n**Email:** afectadoscovidpersistentecyl@gmail.com\n\n### Finalidad\n\nLos datos recogidos a través del formulario de contacto se utilizarán exclusivamente para atender su solicitud de información o tramitar su alta como socio de la asociación. No se utilizarán para fines publicitarios sin su consentimiento expreso.\n\n### Derechos\n\nUsted tiene derecho a acceder, rectificar y suprimir sus datos, así como otros derechos explicados en la información adicional que puede solicitar por correo electrónico."
   },
-  "objectives": [
-    {
-      "icon": "⚖️",
-      "title": "Derechos y Reconocimiento",
-      "text": "Luchamos por el reconocimiento legal y administrativo de la enfermedad, asegurando que cada paciente reciba el apoyo y la protección que merece."
-    },
-    {
-      "icon": "🔬",
-      "title": "Investigación y Colaboración",
-      "text": "Impulsamos y colaboramos en proyectos científicos para avanzar en el diagnóstico y tratamiento del COVID Persistente."
-    },
-    {
-      "icon": "📢",
-      "title": "Visibilización",
-      "text": "Sensibilizamos a la sociedad y a las instituciones sobre la realidad de nuestra condición. Damos voz a quienes el silencio ha ocultado."
-    }
-  ],
+  "community": {
+    "text": "Conecta con nosotros a través de nuestras plataformas oficiales."
+  },
   "symptoms": [
     {
       "icon": "🔋",
@@ -55,6 +40,53 @@
       "icon": "💤",
       "title": "Alteraciones del Sueño",
       "text": "Insomnio o sueño no reparador que agrava el resto de la sintomatología."
+    }
+  ],
+  "social": {
+    "instagram": "https://www.instagram.com/acopercyl/",
+    "x": "https://x.com/Covidpersistcyl",
+    "facebook": "https://www.facebook.com/groups/512722889776789/"
+  },
+  "about": {
+    "mission": "Somos una asociación sin ánimo de lucro formada por personas afectadas por COVID Persistente, familiares y colaboradores, comprometidos con mejorar la vida de quienes sufren esta enfermedad.",
+    "vision": "Nacemos ante la necesidad de dar visibilidad a una enfermedad aún poco reconocida, que afecta profundamente a la salud y calidad de vida de miles de personas.",
+    "struggle": "Trabajamos por el reconocimiento sanitario, social, administrativo y laboral del COVID Persistente. Luchamos por la creación de protocolos médicos unificados y unidades de atención específicas y multidisciplinares."
+  },
+  "news": [
+    {
+      "title": "El PSOE pedirá la reapertura de la unidad especial de referencia en covid persistente",
+      "source": "El Norte de Castilla",
+      "url": "https://www.elnortedecastilla.es/castillayleon/psoe-pedira-reapertura-unidad-especial-referencia-covid-20260513191507-nt.html",
+      "image": "",
+      "date": "2026-05-13"
+    },
+    {
+      "title": "Avances en la investigación del Long COVID en España",
+      "source": "Salud Castilla y León",
+      "url": "https://www.ejemplo.com/noticia2",
+      "image": "/assets/img/logo.png",
+      "date": "2026-05-08"
+    },
+    {
+      "title": "Participación en el Congreso Nacional de COVID Persistente",
+      "source": "Congreso Sanidad",
+      "url": "https://www.ejemplo.com/noticia4",
+      "image": "/assets/img/logo.png",
+      "date": "2026-04-20"
+    },
+    {
+      "title": "Entrevista en RTVCyL: La realidad de los afectados",
+      "source": "RTVCyL",
+      "url": "https://www.ejemplo.com/noticia5",
+      "image": "/assets/img/logo.png",
+      "date": "2026-04-15"
+    },
+    {
+      "title": "Nueva delegación de la asociación en León",
+      "source": "Diario de León",
+      "url": "https://www.ejemplo.com/noticia6",
+      "image": "/assets/img/logo.png",
+      "date": "2026-04-01"
     }
   ],
   "faq": [
@@ -91,57 +123,25 @@
       "answer": "Nuestra sede y ámbito principal de actuación es Castilla y León, aunque colaboramos estrechamente con entidades y federaciones a nivel nacional."
     }
   ],
-  "community": {
-    "text": "Conecta con nosotros a través de nuestras plataformas oficiales."
-  },
-  "social": {
-    "instagram": "https://www.instagram.com/acopercyl/",
-    "x": "https://x.com/Covidpersistcyl",
-    "facebook": "https://www.facebook.com/groups/512722889776789/"
-  },
-  "contact": {
-    "email": "afectadoscovidpersistentecyl@gmail.com",
-    "location": "Castilla y León, España",
-    "footer_text": "Asociación de COVID Persistente de Castilla y León. Trabajando por el reconocimiento y apoyo integral de los afectados."
-  },
-  "privacy": {
-    "content": "### Responsable del Tratamiento\n\n**Entidad:** ASOCIACIÓN DE COVID PERSISTENTE DE CASTILLA Y LEÓN (ACOPERCYL)\n**CIF:** G24914599\n**Registro:** Nº 0006334 (Sección PRIMERA)\n**Email:** afectadoscovidpersistentecyl@gmail.com\n\n### Finalidad\n\nLos datos recogidos a través del formulario de contacto se utilizarán exclusivamente para atender su solicitud de información o tramitar su alta como socio de la asociación. No se utilizarán para fines publicitarios sin su consentimiento expreso.\n\n### Derechos\n\nUsted tiene derecho a acceder, rectificar y suprimir sus datos, así como otros derechos explicados en la información adicional que puede solicitar por correo electrónico."
-  },
-  "news": [
+  "objectives": [
     {
-      "title": "El PSOE pedirá la reapertura de la unidad especial de referencia en covid persistente",
-      "source": "El Norte de Castilla",
-      "url": "https://www.elnortedecastilla.es/castillayleon/psoe-pedira-reapertura-unidad-especial-referencia-covid-20260513191507-nt.html",
-      "image": "/assets/img/logo.png",
-      "date": "2026-05-13"
+      "icon": "⚖️",
+      "title": "Derechos y Reconocimiento",
+      "text": "Luchamos por el reconocimiento legal y administrativo de la enfermedad, asegurando que cada paciente reciba el apoyo y la protección que merece."
     },
     {
-      "title": "Avances en la investigación del Long COVID en España",
-      "source": "Salud Castilla y León",
-      "url": "https://www.ejemplo.com/noticia2",
-      "image": "/assets/img/logo.png",
-      "date": "2026-05-08"
+      "icon": "🔬",
+      "title": "Investigación y Colaboración",
+      "text": "Impulsamos y colaboramos en proyectos científicos para avanzar en el diagnóstico y tratamiento del COVID Persistente."
     },
     {
-      "title": "Participación en el Congreso Nacional de COVID Persistente",
-      "source": "Congreso Sanidad",
-      "url": "https://www.ejemplo.com/noticia4",
-      "image": "/assets/img/logo.png",
-      "date": "2026-04-20"
-    },
-    {
-      "title": "Entrevista en RTVCyL: La realidad de los afectados",
-      "source": "RTVCyL",
-      "url": "https://www.ejemplo.com/noticia5",
-      "image": "/assets/img/logo.png",
-      "date": "2026-04-15"
-    },
-    {
-      "title": "Nueva delegación de la asociación en León",
-      "source": "Diario de León",
-      "url": "https://www.ejemplo.com/noticia6",
-      "image": "/assets/img/logo.png",
-      "date": "2026-04-01"
+      "icon": "📢",
+      "title": "Visibilización",
+      "text": "Sensibilizamos a la sociedad y a las instituciones sobre la realidad de nuestra condición. Damos voz a quienes el silencio ha ocultado."
     }
-  ]
+  ],
+  "hero": {
+    "title": "Vivir con COVID Persistente no debería hacerse en soledad",
+    "text": "Información, apoyo y recursos para quienes luchan contra el COVID Persistente en Castilla y León. Dando voz al silencio."
+  }
 }
