@@ -124,16 +124,49 @@ function renderNews() {
                     <span class="news-date">${new Date(item.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
                     ${item.source ? `<span class="news-source">| ${item.source}</span>` : ''}
                 </div>
-                <h3>${item.title}</h3>
-                <a href="${item.url}" target="_blank" class="btn-news">
-                    Leer noticia 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </a>
+                <div class="news-footer">
+                    <a href="${item.url}" target="_blank" class="btn-news">Leer más ➔</a>
+                    <button class="btn-share" onclick="shareNews('${item.title}', '${item.url}')" aria-label="Compartir noticia">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+                        Compartir
+                    </button>
+                </div>
             </div>
         </article>
     `).join('');
+    
+    // Activar reveal en las nuevas tarjetas
+    setTimeout(initReveal, 100);
 
     if (actions) actions.style.display = (newsVisible < sorted.length) ? 'flex' : 'none';
+}
+
+window.shareNews = async (title, url) => {
+    if (navigator.share) {
+        try {
+            await navigator.share({ title, url });
+        } catch (e) { console.log('Error compartiendo'); }
+    } else {
+        // Fallback: Copiar al portapapeles
+        navigator.clipboard.writeText(url);
+        alert('Enlace copiado al portapapeles');
+    }
+};
+
+function initReveal() {
+    const reveals = document.querySelectorAll('.reveal, .news-card, .faq-item, .objective-card, .symptom-card');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    reveals.forEach(el => {
+        if (!el.classList.contains('reveal')) el.classList.add('reveal');
+        observer.observe(el);
+    });
 }
 
 function renderListCards(id, items) {
@@ -187,8 +220,59 @@ function setupFAQEvents() {
 }
 
 // --- EVENTOS DE INTERFAZ ---
+
+/**
+ * Gestión del Scroll y Botón Volver Arriba
+ */
+function initScrollFeatures() {
+    const backToTop = document.getElementById('back-to-top');
+    const scrollProgress = document.getElementById('scroll-progress');
+    
+    // --- Barra de Progreso y Volver Arriba ---
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+        // Barra de progreso
+        if (scrollProgress) {
+            if (scrollTop < 5) {
+                scrollProgress.style.width = '0%';
+                scrollProgress.style.opacity = '0';
+                scrollProgress.style.display = 'none';
+            } else {
+                scrollProgress.style.display = 'block';
+                setTimeout(() => {
+                    scrollProgress.style.opacity = '1';
+                    const progress = (scrollTop / totalHeight) * 100;
+                    scrollProgress.style.width = Math.min(progress, 100) + '%';
+                }, 10);
+            }
+        }
+
+        // Botón Volver Arriba
+        if (backToTop) {
+            if (scrollTop > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        }
+    });
+
+    if (backToTop) {
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    initScrollFeatures();
     loadSiteData();
+    initReveal();
 
     // Ver más noticias
     const btnLoadMore = document.getElementById('btn-load-more');
@@ -201,13 +285,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Header & Scroll Progress
     const header = document.querySelector('header');
+    
+    function updateScrollProgress() {
+        const scrollProgress = document.getElementById('scroll-progress');
+        if (scrollProgress) {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            
+            // Corrección: Si estamos arriba del todo, forzar 0% y ocultar totalmente
+            if (scrollTop < 5) {
+                scrollProgress.style.width = '0%';
+                scrollProgress.style.opacity = '0';
+                scrollProgress.style.display = 'none';
+                return;
+            }
+
+            const progress = (scrollTop / totalHeight) * 100;
+            scrollProgress.style.display = 'block';
+            setTimeout(() => {
+                scrollProgress.style.opacity = '1';
+                scrollProgress.style.width = Math.min(progress, 100) + '%';
+            }, 10);
+        }
+    }
+
     window.addEventListener('scroll', () => {
-        // Progress Bar
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-        const progress = document.getElementById("scroll-progress");
-        if (progress) progress.style.width = scrolled + "%";
+        updateScrollProgress();
 
         // Header Sticky
         if (header) {

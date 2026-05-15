@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     /* Colors - Brand (Official Long COVID Teal) */
     --primary: #1f9094; 
@@ -103,10 +107,13 @@ h1, h2, h3, h4, .font-heading {
     top: 0;
     left: 0;
     width: 0%;
-    height: 3px;
-    background: var(--primary-light);
-    z-index: 10001; /* Por encima de todo */
-    transition: width 0.1s ease-out;
+    height: 4px;
+    background: var(--primary);
+    z-index: 10001;
+    transition: width 0.1s ease, opacity 0.3s ease;
+    opacity: 0;
+    display: none; /* Oculto por defecto */
+    pointer-events: none;
 }
 
 /* Header & Navigation */
@@ -1080,12 +1087,124 @@ header {
     justify-content: center;
 }
 
-.news-image-container.no-image .news-image {
-    width: 60px;
-    height: auto;
-    object-fit: contain;
-    opacity: 0.4;
-    filter: grayscale(1);
+/* --- BOTÓN VOLVER ARRIBA --- */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    background: var(--primary-dark);
+}
+
+/* --- BOTÓN COOKIES (IZQUIERDA) --- */
+.cookie-settings-btn {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    z-index: 999;
+    transition: var(--transition-standard);
+}
+
+.cookie-settings-btn:hover {
+    transform: scale(1.1);
+    border-color: var(--primary);
+}
+
+.dark-mode .cookie-settings-btn {
+    background: var(--light);
+}
+
+.theme-toggle {
+    background: var(--primary);
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    gap: 10px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+}
+
+.header-actions .theme-toggle {
+    display: none; /* Oculto en el header principal */
+}
+/* --- ANIMACIONES REVEAL --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- BOTÓN COMPARTIR --- */
+.btn-share {
+    background: none;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.btn-share:hover {
+    color: var(--primary-dark);
+}
+
+.news-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
 }
 
 .news-body {

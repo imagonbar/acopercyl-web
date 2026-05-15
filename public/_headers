@@ -1,0 +1,12 @@
+/*
+  # Protección contra XSS y Sniffing
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  
+  # Política de Referencia (Privacidad)
+  Referrer-Policy: strict-origin-when-cross-origin
+  
+  # Content Security Policy (CSP) - Versión inicial segura
+  # Permite scripts de la propia web, Google Analytics y Netlify
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://identity.netlify.com https://challenges.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://identity.netlify.com; frame-src https://challenges.netlify.com https://challenges.cloudflare.com;
