@@ -116,11 +116,14 @@ function renderNews() {
     
     container.innerHTML = slice.map(item => `
         <article class="news-card">
-            <div class="news-image-container">
+            <div class="news-image-container ${!item.image ? 'no-image' : ''}">
                 <img src="${item.image || '/assets/img/logo.png'}" alt="${item.title}" class="news-image" onerror="this.src='/assets/img/logo.png'">
             </div>
             <div class="news-body">
-                <span class="news-date">${new Date(item.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+                <div class="news-meta">
+                    <span class="news-date">${new Date(item.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+                    ${item.source ? `<span class="news-source">| ${item.source}</span>` : ''}
+                </div>
                 <h3>${item.title}</h3>
                 <a href="${item.url}" target="_blank" class="btn-news">
                     Leer noticia 

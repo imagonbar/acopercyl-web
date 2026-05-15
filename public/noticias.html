@@ -384,7 +384,10 @@
                             </div>
                             <div class="featured-content">
                                 <span class="badge-main">MÁS RECIENTE</span>
-                                <span class="news-date" style="color:var(--text-muted); margin-bottom:1rem; display:block; font-weight:600;">${new Date(item.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+                                <div class="news-meta" style="margin-bottom:1rem;">
+                                    <span class="news-date" style="color:var(--text-muted); font-weight:600;">${new Date(item.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+                                    ${item.source ? `<span class="news-source" style="color:var(--primary); font-weight:600;"> | ${item.source}</span>` : ''}
+                                </div>
                                 <h2 style="font-size:clamp(1.8rem, 3vw, 2.5rem); margin-bottom:1.5rem; line-height:1.2; font-family:'Outfit',sans-serif;">${item.title}</h2>
                                 <a href="${item.url}" target="_blank" class="btn btn-primary" style="align-self: flex-start; padding: 1rem 2rem;">Leer Artículo Completo</a>
                             </div>
@@ -393,11 +396,14 @@
                 } else {
                     html += `
                         <article class="news-card">
-                            <div class="news-image-container">
+                            <div class="news-image-container ${!item.image ? 'no-image' : ''}">
                                 <img src="${item.image || '/assets/img/logo.png'}" class="news-image" alt="${item.title}" onerror="this.src='/assets/img/logo.png'">
                             </div>
                             <div class="news-body">
-                                <span class="news-date" style="font-weight:600;">${new Date(item.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+                                <div class="news-meta">
+                                    <span class="news-date" style="font-weight:600;">${new Date(item.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+                                    ${item.source ? `<span class="news-source">| ${item.source}</span>` : ''}
+                                </div>
                                 <h3 style="font-family:'Outfit', sans-serif;">${item.title}</h3>
                                 <a href="${item.url}" target="_blank" class="btn-news">Seguir leyendo ➔</a>
                             </div>

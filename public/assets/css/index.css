@@ -1059,8 +1059,33 @@ header {
     transition: transform 0.5s ease;
 }
 
-.news-card:hover .news-image {
-    transform: scale(1.05);
+.news-meta {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+.news-source {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.news-image-container.no-image {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-image-container.no-image .news-image {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.4;
+    filter: grayscale(1);
 }
 
 .news-body {
