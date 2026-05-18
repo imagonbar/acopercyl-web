@@ -116,15 +116,17 @@ function renderNews() {
     
     container.innerHTML = slice.map(item => `
         <article class="news-card">
-            <div class="news-image-container ${!item.image ? 'no-image' : ''}">
-                <img src="${item.image || '/assets/img/logo.png'}" alt="${item.title}" class="news-image" onerror="this.src='/assets/img/logo.png'">
-            </div>
+            <a href="${item.url}" target="_blank" style="display: block; overflow: hidden;">
+                <div class="news-image-container ${!item.image ? 'no-image' : ''}">
+                    <img src="${item.image || '/assets/img/logo.png'}" alt="${item.title}" class="news-image" onerror="this.src='/assets/img/logo.png'">
+                </div>
+            </a>
             <div class="news-body">
                 <div class="news-meta">
                     <span class="news-date">${new Date(item.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
                     ${item.source ? `<span class="news-source">| ${item.source}</span>` : ''}
                 </div>
-                <h3>${item.title}</h3>
+                <h3><a href="${item.url}" target="_blank" class="news-title-link">${item.title}</a></h3>
                 <div class="news-footer">
                     <a href="${item.url}" target="_blank" class="btn-news">Leer más ➔</a>
                     <button class="btn-share" onclick="shareNews('${item.title}', '${item.url}')" aria-label="Compartir noticia">
