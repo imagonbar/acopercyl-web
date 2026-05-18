@@ -4,11 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Administración ACOPERCYL</title>
-  <script>
-    // Enlazar de forma transparente con el backend de Netlify Identity desde Vercel
-    window.localStorage.setItem('netlifySiteURL', 'https://luminous-narwhal-d38f6e.netlify.app');
-  </script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    // Inicializar explícitamente Netlify Identity apuntando al servidor de Netlify
+    netlifyIdentity.init({
+      APIUrl: 'https://luminous-narwhal-d38f6e.netlify.app/.netlify/identity'
+    });
+  </script>
 </head>
 <body>
   <!-- Incluye el script de Decap CMS -->
