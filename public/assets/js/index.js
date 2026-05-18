@@ -124,6 +124,7 @@ function renderNews() {
                     <span class="news-date">${new Date(item.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
                     ${item.source ? `<span class="news-source">| ${item.source}</span>` : ''}
                 </div>
+                <h3>${item.title}</h3>
                 <div class="news-footer">
                     <a href="${item.url}" target="_blank" class="btn-news">Leer más ➔</a>
                     <button class="btn-share" onclick="shareNews('${item.title}', '${item.url}')" aria-label="Compartir noticia">
