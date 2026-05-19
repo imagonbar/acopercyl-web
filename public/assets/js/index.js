@@ -191,7 +191,7 @@ function renderSocialSection(social) {
 }
 
 /**
- * Gestión del Acordeón de FAQ con Event Delegation y altura dinámica
+ * Gestión del Acordeón de FAQ con Event Delegation
  */
 function initFAQAccordion() {
     document.addEventListener('click', (e) => {
@@ -201,9 +201,6 @@ function initFAQAccordion() {
         const item = question.closest('.faq-item');
         if (!item) return;
 
-        const answer = item.querySelector('.faq-answer');
-        if (!answer) return;
-
         const isActive = item.classList.contains('active');
 
         // Cerrar todos los demás acordeones abiertos
@@ -212,20 +209,12 @@ function initFAQAccordion() {
                 other.classList.remove('active');
                 const otherBtn = other.querySelector('.faq-question');
                 if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
-                const otherAns = other.querySelector('.faq-answer');
-                if (otherAns) otherAns.style.maxHeight = null;
             }
         });
 
         // Alternar el estado del acordeón clicado
         item.classList.toggle('active');
         question.setAttribute('aria-expanded', !isActive);
-
-        if (!isActive) {
-            answer.style.maxHeight = answer.scrollHeight + "px";
-        } else {
-            answer.style.maxHeight = null;
-        }
     });
 }
 

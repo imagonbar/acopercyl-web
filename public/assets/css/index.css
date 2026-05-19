@@ -774,6 +774,10 @@ footer .footer-bottom {
     background: #f9f9f9;
 }
 
+.faq-item.active .faq-answer {
+    max-height: 1000px; /* Alto máximo seguro para evitar desbordes */
+}
+
 .faq-answer p {
     margin: 0;
     padding: 0 1.5rem 1.5rem 1.5rem;
