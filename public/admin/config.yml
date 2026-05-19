@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: main
   site_domain: luminous-narwhal-d38f6e.netlify.app
+  gateway_url: https://luminous-narwhal-d38f6e.netlify.app/.netlify/git
 
 # Configuración explícita para modo local
 local_backend:
