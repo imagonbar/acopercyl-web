@@ -210,24 +210,24 @@ function initFAQAccordion() {
             return;
         }
 
-        const isActive = item.classList.contains('active');
-        console.log('[FAQ System] Estado activo actual del acordeón:', isActive);
+        const isOpen = item.classList.contains('open');
+        console.log('[FAQ System] Estado abierto actual del acordeón:', isOpen);
 
         // Cerrar todos los demás acordeones abiertos
         const otherItems = document.querySelectorAll('.faq-item');
         console.log('[FAQ System] Total de acordeones encontrados:', otherItems.length);
         otherItems.forEach(other => {
             if (other !== item) {
-                other.classList.remove('active');
+                other.classList.remove('open');
                 const otherBtn = other.querySelector('.faq-question');
                 if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
             }
         });
 
         // Alternar el estado del acordeón clicado
-        item.classList.toggle('active');
-        question.setAttribute('aria-expanded', !isActive);
-        console.log('[FAQ System] Estado activo nuevo del acordeón:', item.classList.contains('active'));
+        item.classList.toggle('open');
+        question.setAttribute('aria-expanded', !isOpen);
+        console.log('[FAQ System] Estado abierto nuevo del acordeón:', item.classList.contains('open'));
     });
 }
 

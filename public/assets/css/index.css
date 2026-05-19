@@ -757,12 +757,12 @@ footer .footer-bottom {
     transition: transform 0.3s ease;
 }
 
-.faq-item.active .faq-question::after {
+.faq-item.open .faq-question::after {
     transform: rotate(45deg);
     content: '×'; /* O simplemente rotar el + */
 }
 
-.faq-item.active {
+.faq-item.open {
     border-color: var(--primary-light);
     box-shadow: var(--shadow-md);
 }
@@ -774,7 +774,7 @@ footer .footer-bottom {
     background: #f9f9f9;
 }
 
-.faq-item.active .faq-answer {
+.faq-item.open .faq-answer {
     max-height: 1000px; /* Alto máximo seguro para evitar desbordes */
 }
 
