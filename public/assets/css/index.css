@@ -770,17 +770,13 @@ footer .footer-bottom {
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease;
+    transition: max-height 0.3s ease-out;
     background: #f9f9f9;
-}
-
-.faq-item.active .faq-answer {
-    max-height: 500px; /* Suficiente para el texto */
-    padding: 0 1.5rem 1.5rem;
 }
 
 .faq-answer p {
     margin: 0;
+    padding: 0 1.5rem 1.5rem 1.5rem;
     color: var(--text-muted);
     font-size: 0.85rem; /* Reducido según petición */
     text-align: justify;

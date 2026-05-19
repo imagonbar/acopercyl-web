@@ -42,29 +42,17 @@ async function loadSiteData() {
         renderListCards('objectives-container', data.objectives);
         renderListCards('symptoms-container', data.symptoms);
 
-        // 5. FAQ (Restaurado a diseño original)
+        // 5. FAQ (Renderizado dinámico)
         const faqContainer = document.getElementById('faq-accordion-container');
         if (faqContainer && data.faq) {
             faqContainer.innerHTML = data.faq.map(item => `
                 <div class="faq-item">
-                    <button class="faq-question">${item.question}</button>
+                    <button class="faq-question" aria-expanded="false">${item.question}</button>
                     <div class="faq-answer">
                         <p>${item.answer.replace(/\n/g, '<br>')}</p>
                     </div>
                 </div>
             `).join('');
-            
-            // Re-vincular lógica original de FAQ
-            const faqQuestions = faqContainer.querySelectorAll('.faq-question');
-            faqQuestions.forEach(question => {
-                question.addEventListener('click', () => {
-                    const item = question.parentElement;
-                    document.querySelectorAll('.faq-item').forEach(other => {
-                        if (other !== item) other.classList.remove('active');
-                    });
-                    item.classList.toggle('active');
-                });
-            });
         }
 
         // 6. Comunidad y Redes Sociales
@@ -202,23 +190,42 @@ function renderSocialSection(social) {
     `).join('');
 }
 
-function setupFAQEvents() {
-    const questions = document.querySelectorAll('.faq-question');
-    questions.forEach(q => {
-        q.addEventListener('click', () => {
-            const isOpen = q.getAttribute('aria-expanded') === 'true';
-            questions.forEach(other => {
-                other.setAttribute('aria-expanded', 'false');
-                other.nextElementSibling.style.maxHeight = null;
-                other.querySelector('.faq-icon').textContent = '+';
-            });
-            if (!isOpen) {
-                q.setAttribute('aria-expanded', 'true');
-                const ans = q.nextElementSibling;
-                ans.style.maxHeight = ans.scrollHeight + "px";
-                q.querySelector('.faq-icon').textContent = '-';
+/**
+ * Gestión del Acordeón de FAQ con Event Delegation y altura dinámica
+ */
+function initFAQAccordion() {
+    document.addEventListener('click', (e) => {
+        const question = e.target.closest('.faq-question');
+        if (!question) return;
+
+        const item = question.closest('.faq-item');
+        if (!item) return;
+
+        const answer = item.querySelector('.faq-answer');
+        if (!answer) return;
+
+        const isActive = item.classList.contains('active');
+
+        // Cerrar todos los demás acordeones abiertos
+        document.querySelectorAll('.faq-item').forEach(other => {
+            if (other !== item) {
+                other.classList.remove('active');
+                const otherBtn = other.querySelector('.faq-question');
+                if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                const otherAns = other.querySelector('.faq-answer');
+                if (otherAns) otherAns.style.maxHeight = null;
             }
         });
+
+        // Alternar el estado del acordeón clicado
+        item.classList.toggle('active');
+        question.setAttribute('aria-expanded', !isActive);
+
+        if (!isActive) {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+        } else {
+            answer.style.maxHeight = null;
+        }
     });
 }
 
@@ -276,6 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollFeatures();
     loadSiteData();
     initReveal();
+    initFAQAccordion();
 
     // Ver más noticias
     const btnLoadMore = document.getElementById('btn-load-more');
