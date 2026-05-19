@@ -50,8 +50,8 @@ collections:
             widget: "list"
             summary: '{{title}} ({{date}})'
             fields:
-              - {label: "Título", name: "title", widget: "string"}
-              - {label: "Medio de Comunicación", name: "source", widget: "string", hint: "Ej: El Norte de Castilla, RNE, etc."}
+              - {label: "Título", name: "title", widget: "string", required: false}
+              - {label: "Medio de Comunicación", name: "source", widget: "string", hint: "Ej: El Norte de Castilla, RNE, etc.", required: false}
               - {label: "URL", name: "url", widget: "string"}
               - {label: "Imagen", name: "image", widget: "image", required: false}
-              - {label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+              - {label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", required: false}
