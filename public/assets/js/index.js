@@ -191,20 +191,32 @@ function renderSocialSection(social) {
 }
 
 /**
- * Gestión del Acordeón de FAQ con Event Delegation
+ * Gestión del Acordeón de FAQ con Event Delegation y Depuración
  */
 function initFAQAccordion() {
+    console.log('[FAQ System] initFAQAccordion inicializado correctamente');
+    
+    const container = document.getElementById('faq-accordion-container');
+    console.log('[FAQ System] Contenedor del acordeón FAQ encontrado:', container);
+
     document.addEventListener('click', (e) => {
         const question = e.target.closest('.faq-question');
         if (!question) return;
 
+        console.log('[FAQ System] Clic detectado en pregunta FAQ:', question.textContent.trim());
         const item = question.closest('.faq-item');
-        if (!item) return;
+        if (!item) {
+            console.log('[FAQ System] ERROR: No se encontró el contenedor padre .faq-item');
+            return;
+        }
 
         const isActive = item.classList.contains('active');
+        console.log('[FAQ System] Estado activo actual del acordeón:', isActive);
 
         // Cerrar todos los demás acordeones abiertos
-        document.querySelectorAll('.faq-item').forEach(other => {
+        const otherItems = document.querySelectorAll('.faq-item');
+        console.log('[FAQ System] Total de acordeones encontrados:', otherItems.length);
+        otherItems.forEach(other => {
             if (other !== item) {
                 other.classList.remove('active');
                 const otherBtn = other.querySelector('.faq-question');
@@ -215,6 +227,7 @@ function initFAQAccordion() {
         // Alternar el estado del acordeón clicado
         item.classList.toggle('active');
         question.setAttribute('aria-expanded', !isActive);
+        console.log('[FAQ System] Estado activo nuevo del acordeón:', item.classList.contains('active'));
     });
 }
 
