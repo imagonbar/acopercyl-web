@@ -254,6 +254,22 @@ nav {
     font-family: 'Outfit', sans-serif;
 }
 
+.mobile-menu-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+    padding-top: 3.5rem; /* Más espacio superior solicitado */
+}
+
+.mobile-menu-footer .btn {
+    width: 100%;
+    max-width: 280px; /* Tamaño consistente y centrado */
+    margin-bottom: 1.5rem;
+}
+
+
 .nav-links a {
     text-decoration: none;
     color: var(--text-main);

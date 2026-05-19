@@ -337,19 +337,77 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (close && menu) {
-        close.addEventListener('click', () => {
+    const closeMenu = () => {
+        if (menu) {
             menu.classList.remove('active');
             document.body.style.overflow = 'auto';
-        });
+        }
+    };
+
+    if (close) {
+        close.addEventListener('click', closeMenu);
     }
 
-    document.querySelectorAll('.mobile-nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            menu?.classList.remove('active');
-            document.body.style.overflow = 'auto';
+    // Cerrar menú al hacer click en cualquier enlace interno (navegación y botón Hazte Socio)
+    document.querySelectorAll('.mobile-nav-links a, .mobile-menu-footer a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // --- MANEJO DE ANCLAS Y DESPLAZAMIENTO SUAVE CON OFFSET ---
+    
+    // Función centralizada para scroll suave con offset del header sticky
+    const scrollToSection = (targetHash, isSmooth = true) => {
+        if (!targetHash || targetHash === '#') return false;
+        const target = document.querySelector(targetHash);
+        if (!target) return false;
+
+        const headerHeight = document.querySelector('header')?.offsetHeight || 80;
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+        window.scrollTo({
+            top: targetPosition,
+            behavior: isSmooth ? 'smooth' : 'auto'
+        });
+        return true;
+    };
+
+    // 1. Clics en enlaces internos de la misma página
+    document.querySelectorAll('a[href^="#"], a[href*="index.html#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (!href) return;
+            
+            const hashIndex = href.indexOf('#');
+            if (hashIndex === -1) return;
+            
+            const hash = href.substring(hashIndex);
+            if (hash === '#') return;
+
+            const pathPart = href.substring(0, hashIndex);
+            // Comprobamos si el enlace apunta a la página actual
+            const isLocal = pathPart === '' || pathPart === 'index.html' || pathPart === './index.html';
+            const isHomePage = window.location.pathname === '/' || window.location.pathname.endsWith('index.html') || window.location.pathname === '';
+
+            if (isLocal && isHomePage) {
+                const scrolled = scrollToSection(hash, true);
+                if (scrolled) {
+                    e.preventDefault();
+                    closeMenu();
+                    history.pushState(null, null, hash);
+                }
+            }
         });
     });
+
+    // 2. Controlar la navegación inicial con hash de otra página (por ejemplo, desde noticias.html)
+    if (window.location.hash) {
+        // Ejecutamos al terminar la carga de la página
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                scrollToSection(window.location.hash, true);
+            }, 250); // Un pequeño retardo para asegurar que la página se ha pintado
+        });
+    }
 });
 
 console.log("%c🚀 ACOPERCYL v2.0 - News System Active", "color: #1f9094; font-weight: bold; font-size: 14px;");
