@@ -281,11 +281,47 @@ function initScrollFeatures() {
     }
 }
 
+/**
+ * Gestión del Banner de Cookies y su botón flotante
+ */
+function initCookieBanner() {
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const settingsBtn = document.getElementById('cookie-settings-btn');
+
+    if (!banner || !acceptBtn) return;
+
+    // Comprobar consentimiento guardado
+    const cookiesAccepted = localStorage.getItem('cookies-accepted');
+
+    if (!cookiesAccepted) {
+        banner.style.display = 'block';
+    }
+
+    // Aceptar cookies
+    acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('cookies-accepted', 'true');
+        banner.style.display = 'none';
+    });
+
+    // Abrir/Cerrar banner desde el botón de la galleta flotante
+    if (settingsBtn) {
+        settingsBtn.addEventListener('click', () => {
+            if (banner.style.display === 'none' || banner.style.display === '') {
+                banner.style.display = 'block';
+            } else {
+                banner.style.display = 'none';
+            }
+        });
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initScrollFeatures();
     loadSiteData();
     initReveal();
     initFAQAccordion();
+    initCookieBanner();
 
     // Ver más noticias
     const btnLoadMore = document.getElementById('btn-load-more');
