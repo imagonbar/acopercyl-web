@@ -1,6 +1,6 @@
 /**
  * Serverless function to handle the GitHub OAuth callback for Decap CMS.
- * Exchanges the code for an access token and returns it to the parent window.
+ * Exchanges the code for an access token and returns it using the Decap CMS handshake protocol.
  */
 module.exports = async (req, res) => {
   const code = req.query.code;
@@ -45,7 +45,7 @@ module.exports = async (req, res) => {
       return;
     }
 
-    // Return the token back to the main CMS window using postMessage
+    // Return the token using the Decap CMS handshake protocol (two-way postMessage)
     res.setHeader("Content-Type", "text/html");
     res.status(200).send(`
       <!DOCTYPE html>
@@ -79,10 +79,22 @@ module.exports = async (req, res) => {
         <div class="spinner"></div>
         
         <script>
-          const tokenData = ${JSON.stringify({ token: access_token, provider: 'github' })};
-          // Send token back to the Decap CMS window
-          window.opener.postMessage('authorization:github:success:' + JSON.stringify(tokenData), '*');
-          window.close();
+          (function() {
+            const tokenData = ${JSON.stringify({ token: access_token, provider: 'github' })};
+            
+            function receiveMessage(e) {
+              // Send the success token message back to the CMS opener window
+              window.opener.postMessage('authorization:github:success:' + JSON.stringify(tokenData), e.origin);
+              // Close the popup window
+              window.close();
+            }
+            
+            // Listen for the reply from the CMS window to complete the handshake
+            window.addEventListener("message", receiveMessage, false);
+            
+            // Start the handshake by telling the CMS opener we are ready
+            window.opener.postMessage("authorizing:github", "*");
+          })();
         </script>
       </body>
       </html>
