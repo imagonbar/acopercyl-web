@@ -24,7 +24,7 @@ async function loadSiteData() {
         
         const data = await response.json();
         console.log('[Sistema] JSON cargado correctamente:', data);
-
+ 
         // 1. Noticias (Prioridad)
         if (data.news && data.news.length > 0) {
             allNews = data.news;
@@ -32,7 +32,7 @@ async function loadSiteData() {
         } else {
             if (newsContainer) newsContainer.innerHTML = '<p style="text-align:center; grid-column: 1/-1; opacity: 0.6;">No hay noticias registradas en el JSON.</p>';
         }
-
+ 
         // 2. Hero Section
         const heroTitle = document.getElementById('hero-title');
         const heroText = document.getElementById('hero-text');
@@ -46,11 +46,11 @@ async function loadSiteData() {
         if (missionText && data.about?.mission) missionText.textContent = data.about.mission;
         if (visionText && data.about?.vision) visionText.textContent = data.about.vision;
         if (struggleText && data.about?.struggle) struggleText.textContent = data.about.struggle;
-
+ 
         // 4. Objetivos y Síntomas
         renderListCards('objectives-container', data.objectives);
         renderListCards('symptoms-container', data.symptoms);
-
+ 
         // 5. FAQ (Renderizado dinámico)
         const faqContainer = document.getElementById('faq-accordion-container');
         if (faqContainer && data.faq) {
@@ -63,10 +63,10 @@ async function loadSiteData() {
                 </div>
             `).join('');
         }
-
+ 
         // 6. Comunidad y Redes Sociales
         renderSocialSection(data.social);
-
+ 
         // 7. Política de Privacidad
         const privacyContent = document.getElementById('privacy-dynamic-content');
         if (privacyContent && data.privacy?.content) {
@@ -76,7 +76,7 @@ async function loadSiteData() {
                 .replace(/\*\*(.*)\*\*/gim, '<strong>$1</strong>')
                 .replace(/\n/gim, '<br>');
         }
-
+ 
         // 8. Footer Info
         const footerEmail = document.getElementById('footer-email');
         if (footerEmail && data.contact?.email) {
@@ -93,14 +93,14 @@ async function loadSiteData() {
         if (footerLocation && data.contact?.location) footerLocation.textContent = data.contact.location;
         const footerBrandText = document.getElementById('footer-brand-text');
         if (footerBrandText && data.contact?.footer_text) footerBrandText.textContent = data.contact.footer_text;
-
+ 
         const mobileMenuPhone = document.getElementById('mobile-menu-phone');
         if (mobileMenuPhone && data.contact?.phone) {
             const cleanPhone = data.contact.phone.replace(/\D/g, '');
             mobileMenuPhone.href = `tel:+34${cleanPhone}`;
             mobileMenuPhone.textContent = formatPhoneSpan(data.contact.phone);
         }
-
+ 
         // 9. Contact Info Card (if exists in #contacto)
         const contactPhone = document.getElementById('contact-phone');
         if (contactPhone && data.contact?.phone) {
@@ -117,7 +117,7 @@ async function loadSiteData() {
         if (contactLocation && data.contact?.location) {
             contactLocation.textContent = data.contact.location;
         }
-
+ 
     } catch (error) {
         console.error('[Sistema] Error Crítico:', error);
         if (newsContainer) {
@@ -130,14 +130,14 @@ async function loadSiteData() {
         }
     }
 }
-
+ 
 // --- FUNCIONES AUXILIARES ---
-
+ 
 function renderNews() {
     const container = document.getElementById('news-container');
     const actions = document.getElementById('news-actions');
     if (!container) return;
-
+ 
     const sorted = [...allNews].sort((a, b) => new Date(b.date) - new Date(a.date));
     const slice = sorted.slice(0, newsVisible);
     
@@ -167,10 +167,10 @@ function renderNews() {
     
     // Activar reveal en las nuevas tarjetas
     setTimeout(initReveal, 100);
-
+ 
     if (actions) actions.style.display = (newsVisible < sorted.length) ? 'flex' : 'none';
 }
-
+ 
 window.shareNews = async (title, url) => {
     if (navigator.share) {
         try {
@@ -182,7 +182,7 @@ window.shareNews = async (title, url) => {
         alert('Enlace copiado al portapapeles');
     }
 };
-
+ 
 function initReveal() {
     const reveals = document.querySelectorAll('.reveal, .news-card, .faq-item, .objective-card, .symptom-card');
     const observer = new IntersectionObserver((entries) => {
@@ -198,7 +198,7 @@ function initReveal() {
         observer.observe(el);
     });
 }
-
+ 
 function renderListCards(id, items) {
     const container = document.getElementById(id);
     if (!container || !items) return;
@@ -210,17 +210,17 @@ function renderListCards(id, items) {
         </div>
     `).join('');
 }
-
+ 
 function renderSocialSection(social) {
     const container = document.getElementById('social-cards-container');
     if (!container || !social) return;
-
+ 
     const config = [
         { id: 'instagram', label: 'Instagram', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>' },
         { id: 'x', label: 'X (Twitter)', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733-16zM4 20l6.768-6.768m2.46-2.46L20 4"></path></svg>' },
         { id: 'facebook', label: 'Facebook', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>' }
     ];
-
+ 
     container.innerHTML = config.map(s => `
         <a href="${social[s.id]}" target="_blank" class="social-card" aria-label="${s.label}">
             <div class="social-icon-wrapper">${s.icon}</div>
@@ -228,7 +228,7 @@ function renderSocialSection(social) {
         </a>
     `).join('');
 }
-
+ 
 /**
  * Gestión del Acordeón de FAQ con Event Delegation y Depuración
  */
@@ -237,21 +237,21 @@ function initFAQAccordion() {
     
     const container = document.getElementById('faq-accordion-container');
     console.log('[FAQ System] Contenedor del acordeón FAQ encontrado:', container);
-
+ 
     document.addEventListener('click', (e) => {
         const question = e.target.closest('.faq-question');
         if (!question) return;
-
+ 
         console.log('[FAQ System] Clic detectado en pregunta FAQ:', question.textContent.trim());
         const item = question.closest('.faq-item');
         if (!item) {
             console.log('[FAQ System] ERROR: No se encontró el contenedor padre .faq-item');
             return;
         }
-
+ 
         const isOpen = item.classList.contains('open');
         console.log('[FAQ System] Estado abierto actual del acordeón:', isOpen);
-
+ 
         // Cerrar todos los demás acordeones abiertos
         const otherItems = document.querySelectorAll('.faq-item');
         console.log('[FAQ System] Total de acordeones encontrados:', otherItems.length);
@@ -262,16 +262,16 @@ function initFAQAccordion() {
                 if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
             }
         });
-
+ 
         // Alternar el estado del acordeón clicado
         item.classList.toggle('open');
         question.setAttribute('aria-expanded', !isOpen);
         console.log('[FAQ System] Estado abierto nuevo del acordeón:', item.classList.contains('open'));
     });
 }
-
+ 
 // --- EVENTOS DE INTERFAZ ---
-
+ 
 /**
  * Gestión del Scroll y Botón Volver Arriba
  */
@@ -283,7 +283,7 @@ function initScrollFeatures() {
     window.addEventListener('scroll', () => {
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
         const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-
+ 
         // Barra de progreso
         if (scrollProgress) {
             if (scrollTop < 5) {
@@ -299,7 +299,7 @@ function initScrollFeatures() {
                 }, 10);
             }
         }
-
+ 
         // Botón Volver Arriba
         if (backToTop) {
             if (scrollTop > 300) {
@@ -309,7 +309,7 @@ function initScrollFeatures() {
             }
         }
     });
-
+ 
     if (backToTop) {
         backToTop.addEventListener('click', () => {
             window.scrollTo({
@@ -319,7 +319,7 @@ function initScrollFeatures() {
         });
     }
 }
-
+ 
 /**
  * Gestión del Banner de Cookies y su botón flotante
  */
@@ -327,22 +327,22 @@ function initCookieBanner() {
     const banner = document.getElementById('cookie-banner');
     const acceptBtn = document.getElementById('accept-cookies');
     const settingsBtn = document.getElementById('cookie-settings-btn');
-
+ 
     if (!banner || !acceptBtn) return;
-
+ 
     // Comprobar consentimiento guardado
     const cookiesAccepted = localStorage.getItem('cookies-accepted');
-
+ 
     if (!cookiesAccepted) {
         banner.style.display = 'block';
     }
-
+ 
     // Aceptar cookies
     acceptBtn.addEventListener('click', () => {
         localStorage.setItem('cookies-accepted', 'true');
         banner.style.display = 'none';
     });
-
+ 
     // Abrir/Cerrar banner desde el botón de la galleta flotante
     if (settingsBtn) {
         settingsBtn.addEventListener('click', () => {
@@ -354,14 +354,14 @@ function initCookieBanner() {
         });
     }
 }
-
+ 
 document.addEventListener('DOMContentLoaded', () => {
     initScrollFeatures();
     loadSiteData();
     initReveal();
     initFAQAccordion();
     initCookieBanner();
-
+ 
     // Ver más noticias
     const btnLoadMore = document.getElementById('btn-load-more');
     if (btnLoadMore) {
@@ -370,7 +370,7 @@ document.addEventListener('DOMContentLoaded', () => {
             renderNews();
         });
     }
-
+ 
     // Header & Scroll Progress
     const header = document.querySelector('header');
     
@@ -387,7 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 scrollProgress.style.display = 'none';
                 return;
             }
-
+ 
             const progress = (scrollTop / totalHeight) * 100;
             scrollProgress.style.display = 'block';
             setTimeout(() => {
@@ -396,10 +396,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 10);
         }
     }
-
+ 
     window.addEventListener('scroll', () => {
         updateScrollProgress();
-
+ 
         // Header Sticky
         if (header) {
             if (window.scrollY > 50) {
@@ -409,35 +409,35 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-
+ 
     // Mobile Menu
     const burger = document.getElementById('burger-btn');
     const close = document.getElementById('close-btn');
     const menu = document.getElementById('mobile-menu');
-
+ 
     if (burger && menu) {
         burger.addEventListener('click', () => {
             menu.classList.add('active');
             document.body.style.overflow = 'hidden';
         });
     }
-
+ 
     const closeMenu = () => {
         if (menu) {
             menu.classList.remove('active');
             document.body.style.overflow = 'auto';
         }
     };
-
+ 
     if (close) {
         close.addEventListener('click', closeMenu);
     }
-
+ 
     // Cerrar menú al hacer click en cualquier enlace interno (navegación y botón Hazte Socio)
     document.querySelectorAll('.mobile-nav-links a, .mobile-menu-footer a').forEach(link => {
         link.addEventListener('click', closeMenu);
     });
-
+ 
     // --- MANEJO DE ANCLAS Y DESPLAZAMIENTO SUAVE CON OFFSET ---
     
     // Función centralizada para scroll suave con offset del header sticky
@@ -445,17 +445,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!targetHash || targetHash === '#') return false;
         const target = document.querySelector(targetHash);
         if (!target) return false;
-
+ 
         const headerHeight = document.querySelector('header')?.offsetHeight || 80;
         const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
-
+ 
         window.scrollTo({
             top: targetPosition,
             behavior: isSmooth ? 'smooth' : 'auto'
         });
         return true;
     };
-
+ 
     // 1. Clics en enlaces internos de la misma página
     document.querySelectorAll('a[href^="#"], a[href*="index.html#"]').forEach(link => {
         link.addEventListener('click', (e) => {
@@ -467,12 +467,12 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const hash = href.substring(hashIndex);
             if (hash === '#') return;
-
+ 
             const pathPart = href.substring(0, hashIndex);
             // Comprobamos si el enlace apunta a la página actual
             const isLocal = pathPart === '' || pathPart === 'index.html' || pathPart === './index.html';
             const isHomePage = window.location.pathname === '/' || window.location.pathname.endsWith('index.html') || window.location.pathname === '';
-
+ 
             if (isLocal && isHomePage) {
                 const scrolled = scrollToSection(hash, true);
                 if (scrolled) {
@@ -483,7 +483,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
+ 
     // 2. Controlar la navegación inicial con hash de otra página (por ejemplo, desde noticias.html)
     if (window.location.hash) {
         // Ejecutamos al terminar la carga de la página
@@ -494,5 +494,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
+ 
 console.log("%c🚀 ACOPERCYL v2.0 - News System Active", "color: #1f9094; font-weight: bold; font-size: 14px;");
