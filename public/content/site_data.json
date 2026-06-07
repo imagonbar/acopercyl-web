@@ -1,9 +1,89 @@
 {
+  "news": [
+    {
+      "title": "El PSOE pedirá la reapertura de la unidad especial de referencia en covid persistente",
+      "source": "El Norte de Castilla",
+      "url": "https://www.elnortedecastilla.es/castillayleon/psoe-pedira-reapertura-unidad-especial-referencia-covid-20260513191507-nt.html",
+      "image": "https://s1.ppllstatics.com/elnortedecastilla/www/multimedia/2026/05/13/1491018831-RihTIN1tAwNnwrqkUqt91UM-1200x840@El%20Norte.JPG",
+      "date": "2026-05-13"
+    },
+    {
+      "title": "Nueva asociación: «El covid persistente nos obliga a pelear por nuestra salud\"",
+      "source": "Diario de León",
+      "url": "https://www.diariodeleon.es/sociedad/251216/2069574/covid-persistente-obliga-pelear-nuestra-salud.html",
+      "image": "https://imagenes.diariodeleon.es/files/og_thumbnail/uploads/2025/12/15/6940769c4adaa.jpeg",
+      "date": "2025-12-16"
+    },
+    {
+      "title": "Los enfermos de covid persistente de Castilla y León se unen en busca de apoyo político: «A veces nos miran como si estuviéramos locos»",
+      "source": "El Debate",
+      "url": "https://www.eldebate.com/espana/castilla-y-leon/20260223/enfermos-covid-persistente-castilla-leon-unen-busca-apoyo-politico-veces-miran-como-estuvieramos-locos_387987.html",
+      "image": "https://www.eldebate.com/files/article_social/files/fp/uploads/2026/02/21/6999d1f6c07e4.r_d.1152-540-7371.jpeg",
+      "date": "2026-02-26"
+    },
+    {
+      "title": "Nace la Asociación de Covid Persistente de CyL para visibilizar la realidad de las personas afectadas",
+      "source": "Diario de León",
+      "url": "https://www.diariodeleon.es/castilla-y-leon/251214/2069397/nace-asociacion-covid-persistente-cyl-visibilizar-realidad-personas-afectadas.html",
+      "image": "https://imagenes.diariodeleon.es/files/og_thumbnail/uploads/2024/06/20/6674993e0bd78.jpeg",
+      "date": "2025-12-14"
+    },
+    {
+      "title": "",
+      "source": "",
+      "url": "https://www.diariodeburgos.es/noticia/zf64c260c-b72c-4916-afe4b8a11443e711/202606/enfermos-de-covid-persistente-exigen-respuestas-medicas",
+      "image": "",
+      "date": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Qué es el COVID Persistente?",
+      "answer": "Es una condición que se define por la permanencia de síntomas tras la fase aguda del COVID-19, o incluso por su reaparición tras un periodo de bienestar, afectando al organismo de manera sistémica. Su presencia es independiente de la gravedad de la infección original, manifestándose tanto en casos leves como graves y en personas de cualquier edad.\n\nEsta patología impacta profundamente en la calidad de vida, alterando el desempeño laboral, social y personal. Se caracteriza por una sintomatología fluctuante que suele agravarse ante el esfuerzo físico o cognitivo, limitando significativamente la capacidad funcional de quienes conviven con ella día a día."
+    },
+    {
+      "question": "¿Es una enfermedad reconocida?",
+      "answer": "Aunque está reconocida por la OMS (Organización Mundial de la Salud), aún existe una falta de reconocimiento pleno en ámbitos administrativos y laborales. Trabajamos activamente para su validación."
+    },
+    {
+      "question": "¿Quién puede formar parte de la asociación?",
+      "answer": "Cualquier persona mayor de edad interesada en los fines de la asociación, ya sea como persona afectada, familiar o colaborador comprometido."
+    },
+    {
+      "question": "¿Cómo puedo pertenecer a la asociación?",
+      "answer": "Puedes ponerte en contacto con nosotros a través del botón \"Hazte Socio\" o escribiéndonos directamente al correo electrónico de la asociación."
+    },
+    {
+      "question": "¿La asociación tiene algún coste?",
+      "answer": "Existe una cuota anual destinada exclusivamente a sufragar los gastos de mantenimiento y las actividades de visibilización y apoyo de la asociación."
+    },
+    {
+      "question": "¿Ofrecéis asesoramiento médico?",
+      "answer": "No sustituimos la atención médica profesional, pero ofrecemos información y orientación basada en experiencias compartidas y recursos sanitarios disponibles."
+    },
+    {
+      "question": "¿Realizáis actividades presenciales?",
+      "answer": "Sí, organizamos encuentros, charlas y actos de visibilización en las diferentes provincias de Castilla y León para fortalecer nuestra red de apoyo."
+    },
+    {
+      "question": "¿En qué zona actuáis?",
+      "answer": "Nuestra sede y ámbito principal de actuación es Castilla y León, aunque colaboramos estrechamente con entidades y federaciones a nivel nacional."
+    }
+  ],
+  "hero": {
+    "title": "Vivir con COVID Persistente no debería hacerse en soledad",
+    "text": "Información, apoyo y recursos para quienes luchan contra el COVID Persistente en Castilla y León. Dando voz al silencio."
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/acopercyl/",
+    "x": "https://x.com/Covidpersistcyl",
+    "facebook": "https://www.facebook.com/groups/512722889776789/"
+  },
   "contact": {
     "email": "afectadoscovidpersistentecyl@gmail.com",
+    "phone": "602412587",
     "location": "Castilla y León, España",
-    "footer_text": "Asociación de COVID Persistente de Castilla y León. Trabajando por el reconocimiento y apoyo integral de los afectados.",
-    "phone": "602412587"
+    "footer_text": "Asociación de COVID Persistente de Castilla y León. Trabajando por el reconocimiento y apoyo integral de los afectados."
   },
   "privacy": {
     "content": "### Responsable del Tratamiento\n\n**Entidad:** ASOCIACIÓN DE COVID PERSISTENTE DE CASTILLA Y LEÓN (ACOPERCYL)\n**CIF:** G24914599\n**Registro:** Nº 0006334 (Sección PRIMERA)\n**Email:** afectadoscovidpersistentecyl@gmail.com\n\n### Finalidad\n\nLos datos recogidos a través del formulario de contacto se utilizarán exclusivamente para atender su solicitud de información o tramitar su alta como socio de la asociación. No se utilizarán para fines publicitarios sin su consentimiento expreso.\n\n### Derechos\n\nUsted tiene derecho a acceder, rectificar y suprimir sus datos, así como otros derechos explicados en la información adicional que puede solicitar por correo electrónico."
@@ -43,105 +123,26 @@
       "text": "Insomnio o sueño no reparador que agrava el resto de la sintomatología."
     }
   ],
-  "social": {
-    "instagram": "https://www.instagram.com/acopercyl/",
-    "x": "https://x.com/Covidpersistcyl",
-    "facebook": "https://www.facebook.com/groups/512722889776789/"
-  },
   "about": {
     "mission": "Somos una asociación sin ánimo de lucro formada por personas afectadas por COVID Persistente, familiares y colaboradores, comprometidos con mejorar la vida de quienes sufren esta enfermedad.",
     "vision": "Nacemos ante la necesidad de dar visibilidad a una enfermedad aún poco reconocida, que afecta profundamente a la salud y calidad de vida de miles de personas.",
     "struggle": "Trabajamos por el reconocimiento sanitario, social, administrativo y laboral del COVID Persistente. Luchamos por la creación de protocolos médicos unificados y unidades de atención específicas y multidisciplinares."
   },
-  "news": [
-    {
-      "title": "El PSOE pedirá la reapertura de la unidad especial de referencia en covid persistente",
-      "source": "El Norte de Castilla",
-      "url": "https://www.elnortedecastilla.es/castillayleon/psoe-pedira-reapertura-unidad-especial-referencia-covid-20260513191507-nt.html",
-      "image": "https://s1.ppllstatics.com/elnortedecastilla/www/multimedia/2026/05/13/1491018831-RihTIN1tAwNnwrqkUqt91UM-1200x840@El%20Norte.JPG",
-      "date": "2026-05-13"
-    },
-    {
-      "url": "https://www.diariodeleon.es/sociedad/251216/2069574/covid-persistente-obliga-pelear-nuestra-salud.html",
-      "title": "Nueva asociación: «El covid persistente nos obliga a pelear por nuestra salud\"",
-      "source": "Diario de León ",
-      "date": "2025-12-16",
-      "image": "https://imagenes.diariodeleon.es/files/og_thumbnail/uploads/2025/12/15/6940769c4adaa.jpeg"
-    },
-    {
-      "title": "Los enfermos de covid persistente de Castilla y León se unen en busca de apoyo político: «A veces nos miran como si estuviéramos locos»",
-      "source": "El Debate",
-      "url": "https://www.eldebate.com/espana/castilla-y-leon/20260223/enfermos-covid-persistente-castilla-leon-unen-busca-apoyo-politico-veces-miran-como-estuvieramos-locos_387987.html",
-      "date": "2026-02-26",
-      "image": "https://www.eldebate.com/files/article_social/files/fp/uploads/2026/02/21/6999d1f6c07e4.r_d.1152-540-7371.jpeg"
-    },
-    {
-      "url": "https://www.diariodeleon.es/castilla-y-leon/251214/2069397/nace-asociacion-covid-persistente-cyl-visibilizar-realidad-personas-afectadas.html",
-      "title": "Nace la Asociación de Covid Persistente de CyL para visibilizar la realidad de las personas afectadas",
-      "image": "https://imagenes.diariodeleon.es/files/og_thumbnail/uploads/2024/06/20/6674993e0bd78.jpeg",
-      "source": "Diario de León",
-      "date": "2025-12-14"
-    },
-    {
-      "url": "https://www.diariodeburgos.es/noticia/zf64c260c-b72c-4916-afe4b8a11443e711/202606/enfermos-de-covid-persistente-exigen-respuestas-medicas",
-      "source": "Diario de Burgos",
-      "date": "2026-06-07",
-      "title": "Enfermos de covid persistente exigen respuestas médicas"
-    }
-  ],
-  "faq": [
-    {
-      "question": "¿Qué es el COVID Persistente?",
-      "answer": "Es una condición que se define por la permanencia de síntomas tras la fase aguda del COVID-19, o incluso por su reaparición tras un periodo de bienestar, afectando al organismo de manera sistémica. Su presencia es independiente de la gravedad de la infección original, manifestándose tanto en casos leves como graves y en personas de cualquier edad.\n\nEsta patología impacta profundamente en la calidad de vida, alterando el desempeño laboral, social y personal. Se caracteriza por una sintomatología fluctuante que suele agravarse ante el esfuerzo físico o cognitivo, limitando significativamente la capacidad funcional de quienes conviven con ella día a día."
-    },
-    {
-      "question": "¿Es una enfermedad reconocida?",
-      "answer": "Aunque está reconocida por la OMS (Organización Mundial de la Salud), aún existe una falta de reconocimiento pleno en ámbitos administrativos y laborales. Trabajamos activamente para su validación."
-    },
-    {
-      "question": "¿Quién puede formar parte de la asociación?",
-      "answer": "Cualquier persona mayor de edad interesada en los fines de la asociación, ya sea como persona afectada, familiar o colaborador comprometido."
-    },
-    {
-      "question": "¿Cómo puedo pertenecer a la asociación?",
-      "answer": "Puedes ponerte en contacto con nosotros a través del botón \"Hazte Socio\" o escribiéndonos directamente al correo electrónico de la asociación."
-    },
-    {
-      "question": "¿La asociación tiene algún coste?",
-      "answer": "Existe una cuota anual destinada exclusivamente a sufragar los gastos de mantenimiento y las actividades de visibilización y apoyo de la asociación."
-    },
-    {
-      "question": "¿Ofrecéis asesoramiento médico?",
-      "answer": "No sustituimos la atención médica profesional, pero ofrecemos información y orientación basada en experiencias compartidas y recursos sanitarios disponibles."
-    },
-    {
-      "question": "¿Realizáis actividades presenciales?",
-      "answer": "Sí, organizamos encuentros, charlas y actos de visibilización en las diferentes provincias de Castilla y León para fortalecer nuestra red de apoyo."
-    },
-    {
-      "question": "¿En qué zona actuáis?",
-      "answer": "Nuestra sede y ámbito principal de actuación es Castilla y León, aunque colaboramos estrechamente con entidades y federaciones a nivel nacional."
-    }
-  ],
   "objectives": [
     {
-      "icon": "⚖️",
+      "text": "Luchamos por el reconocimiento legal y administrativo de la enfermedad, asegurando que cada paciente reciba el apoyo y la protección que merece.",
       "title": "Derechos y Reconocimiento",
-      "text": "Luchamos por el reconocimiento legal y administrativo de la enfermedad, asegurando que cada paciente reciba el apoyo y la protección que merece."
+      "icon": "⚖️"
     },
     {
-      "icon": "🔬",
+      "text": "Impulsamos y colaboramos en proyectos científicos para avanzar en el diagnóstico y tratamiento del COVID Persistente.",
       "title": "Investigación y Colaboración",
-      "text": "Impulsamos y colaboramos en proyectos científicos para avanzar en el diagnóstico y tratamiento del COVID Persistente."
+      "icon": "🔬"
     },
     {
-      "icon": "📢",
+      "text": "Sensibilizamos a la sociedad y a las instituciones sobre la realidad de nuestra condición. Damos voz a quienes el silencio ha ocultado.",
       "title": "Visibilización",
-      "text": "Sensibilizamos a la sociedad y a las instituciones sobre la realidad de nuestra condición. Damos voz a quienes el silencio ha ocultado."
+      "icon": "📢"
     }
-  ],
-  "hero": {
-    "title": "Vivir con COVID Persistente no debería hacerse en soledad",
-    "text": "Información, apoyo y recursos para quienes luchan contra el COVID Persistente en Castilla y León. Dando voz al silencio."
-  }
+  ]
 }
