@@ -29,11 +29,25 @@
       "date": "2025-12-14"
     },
     {
-      "title": "",
-      "source": "",
+      "title": "El covid persistente en Segovia podría triplicar las cifras",
+      "source": "El Día de Segovia",
       "url": "https://www.eldiasegovia.es/noticia/z6bc9320c-bc17-48e6-ac6667594ef581e1/202604/el-covid-persistente-en-segovia-podria-triplicar-las-cifras",
-      "image": "",
-      "date": ""
+      "image": "https://www.eldiasegovia.es/media/IMG/2026/29118331-2471-49C0-90DFCB0B76984160.JPG",
+      "date": "2026-04-28"
+    },
+    {
+      "title": "«Seguimos aquí»: los afectados por covid persistente en Castilla y León se unen para reclamar atención y derechos",
+      "source": "El Español",
+      "url": "https://www.elespanol.com/castilla-y-leon/region/20251209/seguimos-afectados-covid-persistente-castilla-leon-unen-reclamar-atencion-derechos/1003744047129_0.html",
+      "image": "https://s3.elespanol.com/2025/01/29/castilla-y-leon/sociedad/sanidad/920168169_252685298_1706x960.jpg?fmt=jpeg",
+      "date": "2025-12-09"
+    },
+    {
+      "title": "Detectan alteraciones inmunológicas asociadas al desarrollo del covid persistente",
+      "source": "Deia",
+      "url": "https://www.deia.eus/salud/2026/05/19/detectan-alteraciones-inmunologicas-asociadas-desarrollo-11087361.html",
+      "image": "https://estaticosgn-cdn.deia.eus/clip/2c26a9b8-c344-4842-ba88-405ba66431a8_16-9-aspect-ratio_default_0.jpg",
+      "date": "2026-05-19"
     }
   ],
   "faq": [
