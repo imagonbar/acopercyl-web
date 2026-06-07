@@ -800,7 +800,15 @@ footer .footer-bottom {
     margin-top: 3rem;
 }
 
-#comunidad .social-card {
+.social-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.social-card {
     display: flex;
     flex-direction: row; /* Horizontal */
     align-items: center;
@@ -818,21 +826,22 @@ footer .footer-bottom {
 }
 
 @media (max-width: 992px) {
-    #comunidad .flex-center {
+    .social-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr); /* Cuadrícula de 3 elementos */
         gap: 1rem;
+        margin-top: 1.5rem;
     }
-    #comunidad .social-card {
+    .social-card {
         flex-direction: column; /* Icono arriba, texto abajo */
         padding: 1rem 0.5rem;
         gap: 0.5rem;
         max-width: 100%;
     }
-    #comunidad .social-label {
+    .social-label {
         font-size: 0.7rem; /* Texto más pequeño para que quepa */
     }
-    #comunidad .social-icon-wrapper {
+    .social-icon-wrapper {
         width: 40px;
         height: 40px;
     }
@@ -1305,9 +1314,9 @@ header {
    Comunicados Section
    ========================================================================== */
 #comunicados {
-    background-color: #f1f3f5; /* Light grey alternative background */
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    background-color: #edf7f2; /* Verde menta suave para Comunicados */
+    border-top: 1px solid rgba(17, 138, 103, 0.1);
+    border-bottom: 1px solid rgba(17, 138, 103, 0.1);
 }
 
 .comunicados-grid {
