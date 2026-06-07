@@ -1,0 +1,39 @@
+name: Auto-completar Metadatos de Noticias
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'public/content/site_data.json'
+
+# Evitar ejecuciones simultáneas del mismo flujo
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  fetch-metadata:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Permiso para escribir cambios de vuelta en el repositorio
+
+    steps:
+      - name: Descargar Código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Ejecutar Scraper de Imágenes y Metadatos
+        run: node scripts/fetch_og_images.js
+
+      - name: Subir cambios a GitHub
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/content/site_data.json
+          # Solo hacer commit si hay cambios (evita fallos si no hay nada que actualizar)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-completar metadatos de noticias [skip ci]" && git push)
