@@ -5,7 +5,7 @@ backend:
   base_url: https://www.acopercyl.org
   auth_endpoint: api/auth
 
-# Configuración explícita para modo local
+# Configuración para modo local
 local_backend:
   url: http://localhost:8081/api/v1
 
@@ -13,39 +13,12 @@ media_folder: "public/assets/img"
 public_folder: "/assets/img"
 
 collections:
-  - name: "config"
-    label: "⚙️ Configuración Web"
+  - name: "web_content"
+    label: "🖥️ Contenido de la Web"
     delete: false
     files:
-      - name: "home"
-        label: "Contenido General"
-        file: "public/content/site_data.json"
-        fields:
-          - {label: "Cabecera (Hero)", name: "hero", widget: "object", fields: [
-              {label: "Título", name: "title", widget: "string"},
-              {label: "Texto", name: "text", widget: "text"}
-            ]}
-          - {label: "FAQ", name: "faq", widget: "list", fields: [
-              {label: "Pregunta", name: "question", widget: "string"},
-              {label: "Respuesta", name: "answer", widget: "text"}
-            ]}
-          - {label: "Redes Sociales", name: "social", widget: "object", fields: [
-              {label: "Instagram", name: "instagram", widget: "string"},
-              {label: "X", name: "x", widget: "string"},
-              {label: "Facebook", name: "facebook", widget: "string"}
-            ]}
-          - {label: "Contacto", name: "contact", widget: "object", fields: [
-              {label: "Email", name: "email", widget: "string"},
-              {label: "Teléfono", name: "phone", widget: "string", required: false},
-              {label: "Ubicación", name: "location", widget: "string"}
-            ]}
-
-  - name: "noticias_panel"
-    label: "📰 Noticias y Prensa"
-    delete: false
-    files:
-      - name: "archivo"
-        label: "Archivo de Noticias"
+      - name: "datos"
+        label: "Gestión General de la Web"
         file: "public/content/site_data.json"
         fields:
           - label: "Listado de Noticias"
@@ -58,3 +31,25 @@ collections:
               - {label: "URL", name: "url", widget: "string"}
               - {label: "Imagen", name: "image", widget: "image", required: false}
               - {label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", required: false}
+
+          - {label: "Preguntas Frecuentes (FAQ)", name: "faq", widget: "list", fields: [
+              {label: "Pregunta", name: "question", widget: "string"},
+              {label: "Respuesta", name: "answer", widget: "text"}
+            ]}
+
+          - {label: "Cabecera (Hero)", name: "hero", widget: "object", fields: [
+              {label: "Título", name: "title", widget: "string"},
+              {label: "Texto", name: "text", widget: "text"}
+            ]}
+
+          - {label: "Redes Sociales", name: "social", widget: "object", fields: [
+              {label: "Instagram", name: "instagram", widget: "string"},
+              {label: "X", name: "x", widget: "string"},
+              {label: "Facebook", name: "facebook", widget: "string"}
+            ]}
+
+          - {label: "Contacto", name: "contact", widget: "object", fields: [
+              {label: "Email", name: "email", widget: "string"},
+              {label: "Teléfono", name: "phone", widget: "string", required: false},
+              {label: "Ubicación", name: "location", widget: "string"}
+            ]}
