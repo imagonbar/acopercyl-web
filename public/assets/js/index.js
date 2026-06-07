@@ -33,6 +33,14 @@ async function loadSiteData() {
             if (newsContainer) newsContainer.innerHTML = '<p style="text-align:center; grid-column: 1/-1; opacity: 0.6;">No hay noticias registradas en el JSON.</p>';
         }
 
+        // 1.5. Comunicados
+        if (data.comunicados && data.comunicados.length > 0) {
+            renderComunicados(data.comunicados);
+        } else {
+            const comunicadosContainer = document.getElementById('comunicados-container');
+            if (comunicadosContainer) comunicadosContainer.innerHTML = '<p style="text-align:center; grid-column: 1/-1; opacity: 0.6;">No hay comunicados oficiales registrados.</p>';
+        }
+
         // 2. Hero Section
         const heroTitle = document.getElementById('hero-title');
         const heroText = document.getElementById('hero-text');
@@ -197,6 +205,33 @@ function initReveal() {
         if (!el.classList.contains('reveal')) el.classList.add('reveal');
         observer.observe(el);
     });
+}
+
+function renderComunicados(comunicados) {
+    const container = document.getElementById('comunicados-container');
+    if (!container) return;
+
+    // Ordenar por fecha descendente
+    const sorted = [...comunicados].sort((a, b) => new Date(b.date) - new Date(a.date));
+    
+    container.innerHTML = sorted.map(item => `
+        <a href="${item.file}" target="_blank" class="comunicado-card reveal">
+            <div class="comunicado-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+            </div>
+            <div class="comunicado-date">${new Date(item.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</div>
+            <h3 class="comunicado-title">${item.title}</h3>
+            <span class="comunicado-link">Ver PDF ➔</span>
+        </a>
+    `).join('');
+
+    setTimeout(initReveal, 100);
 }
 
 function renderListCards(id, items) {

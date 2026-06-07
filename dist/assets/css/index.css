@@ -1301,3 +1301,92 @@ header {
     margin-top: 4rem;
 }
 
+/* ==========================================================================
+   Comunicados Section
+   ========================================================================== */
+#comunicados {
+    background-color: #f1f3f5; /* Light grey alternative background */
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.comunicados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.comunicado-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.comunicado-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+}
+
+.comunicado-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background: rgba(31, 144, 148, 0.1);
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    transition: var(--transition-fast);
+}
+
+.comunicado-card:hover .comunicado-icon-wrapper {
+    background: var(--primary);
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.comunicado-date {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.comunicado-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--text-main);
+    margin-bottom: auto; /* Push link helper to bottom */
+}
+
+.comunicado-link {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition-fast);
+}
+
+.comunicado-card:hover .comunicado-link {
+    color: var(--primary-dark);
+    gap: 0.8rem;
+}
+
