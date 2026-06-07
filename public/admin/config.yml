@@ -33,6 +33,16 @@ collections:
               - {label: "Imagen", name: "image", widget: "image", required: false}
               - {label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", required: false}
 
+          - label: "Comunicados Oficiales"
+            name: "comunicados"
+            widget: "list"
+            collapsed: true
+            summary: '{{title}} ({{date}})'
+            fields:
+              - {label: "Título del Comunicado", name: "title", widget: "string"}
+              - {label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+              - {label: "Archivo PDF", name: "file", widget: "file"}
+
           - label: "Preguntas Frecuentes (FAQ)"
             name: "faq"
             widget: "list"
