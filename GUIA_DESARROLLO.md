@@ -15,46 +15,57 @@ npm run dev
 ```
 *   **Acceso**: `http://localhost:5173`
 
-### Paso 2: Levantar el Servidor del CMS (Local)
-Para poder usar el panel de administración en tu ordenador y que los cambios se guarden en tus archivos locales, necesitas este proxy:
+### Paso 2: Probar el CMS (Local)
+Sveltia CMS no requiere ejecutar servidores proxy o comandos adicionales en segundo plano.
+1. Abre tu navegador (Chrome o Edge) en `http://localhost:5173/admin/`.
+2. El CMS detectará que estás en local y te pedirá **seleccionar la carpeta del proyecto** (`c:\laragon\www\COVID Persistente web`).
+3. Concede permisos de lectura y escritura en el popup del navegador.
+4. Los cambios se guardarán directamente en tu archivo local `public/content/site_data.json`.
+
+---
+
+## 📝 2. Gestión de Contenidos (CMS en Producción)
+
+Cualquier colaborador autorizado puede gestionar el contenido directamente online sin abrir la terminal:
+1.  Entra en: `https://www.acopercyl.org/admin/`
+2.  Identifícate con tu cuenta de GitHub (debe tener permisos de colaborador en el repositorio).
+3.  Edita los textos o las noticias en el panel unificado y pulsa **Publish/Publicar**.
+4.  **Automatización:** Al publicar, un bot de GitHub Actions completará automáticamente las imágenes y datos de portada de los nuevos enlaces y Vercel desplegará los cambios en ~1 minuto.
+
+---
+
+## 🌿 3. Control de Versiones y Ramas (Git)
+
+Para mantener el código organizado y evitar conflictos en la rama principal (`main`), nos acostumbraremos a trabajar con **ramas de desarrollo** para nuevos cambios y mejoras:
+
+### Paso 1: Crear una rama de trabajo
+Antes de empezar una mejora, asegúrate de estar en `main` actualizado y crea una nueva rama descriptiva:
 ```bash
-npx decap-server
+git checkout main
+git pull
+git checkout -b feature/nombre-de-la-mejora
 ```
-*   **Acceso**: `http://localhost:5173/admin/`
+*(Ejemplos de nombres: `feature/mejora-buscador`, `fix/correccion-contacto`)*
 
----
+### Paso 2: Guardar los cambios localmente
+A medida que realices cambios en los archivos, haz commits en tu rama:
+```bash
+git add .
+git commit -m "Explicación clara del cambio realizado"
+```
 
-## 📝 2. Gestión de Contenidos (CMS)
-
-### Opción A: Cambios en Producción (Recomendado)
-No necesitas abrir el terminal ni programas de código.
-1.  Entra en: `https://acopercyl.org/admin/`
-2.  Identifícate con tu usuario.
-3.  Edita los textos o imágenes y pulsa **Publish**.
-4.  Netlify desplegará los cambios automáticamente en ~2 minutos.
-
-### Opción B: Cambios en Local
-Si quieres probar nuevas estructuras o grandes bloques de texto:
-1.  Ten los dos comandos anteriores (`npm run dev` y `npx decap-server`) funcionando.
-2.  Entra en `http://localhost:5173/admin/`.
-3.  Los cambios se guardarán directamente en el archivo `public/content/site_data.json`.
-
----
-
-## 🌐 3. Publicación de Código (Git)
-
-Cuando hagas cambios en archivos `.html`, `.css` o `.js`, debes subirlos a GitHub para que se vean en la web oficial:
-
-1.  **Guardar cambios**:
-    ```bash
-    git add .
-    git commit -m "Explicación breve del cambio (ej: fix color botón)"
-    ```
-
-2.  **Subir a Producción**:
-    ```bash
-    git push origin main
-    ```
+### Paso 3: Subir la rama y fusionar
+Una vez terminados y probados los cambios localmente:
+1. Sube tu rama a GitHub:
+   ```bash
+   git push origin feature/nombre-de-la-mejora
+   ```
+2. Entra en tu repositorio en GitHub y crea un **Pull Request (PR)** para revisar los cambios antes de fusionarlos a `main`, o fusiónalos tú mismo si todo está correcto.
+3. Vuelve a tu rama local `main` y actualízala:
+   ```bash
+   git checkout main
+   git pull
+   ```
 
 ---
 
@@ -73,4 +84,4 @@ Si el formulario de contacto deja de funcionar:
 
 ---
 
-*Guía generada el 12 de mayo de 2026. ¡Dando voz al silencio!*
+*Guía actualizada en junio de 2026. ¡Dando voz al silencio!*
