@@ -60,6 +60,35 @@ collections:
               - {label: "Título", name: "title", widget: "string"}
               - {label: "Texto", name: "text", widget: "text"}
 
+          - label: "Sobre Nosotros"
+            name: "about"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Nuestra Misión", name: "mission", widget: "text"}
+              - {label: "Nuestra Visión", name: "vision", widget: "text"}
+              - {label: "Nuestra Lucha", name: "struggle", widget: "text"}
+
+          - label: "Nuestros Objetivos"
+            name: "objectives"
+            widget: "list"
+            collapsed: true
+            summary: '{{title}}'
+            fields:
+              - {label: "Icono / Emoji", name: "icon", widget: "string", hint: "Ej: ⚖️, 🔬, 📢"}
+              - {label: "Título", name: "title", widget: "string"}
+              - {label: "Texto descriptivo", name: "text", widget: "text"}
+
+          - label: "Síntomas Frecuentes"
+            name: "symptoms"
+            widget: "list"
+            collapsed: true
+            summary: '{{title}}'
+            fields:
+              - {label: "Icono / Emoji", name: "icon", widget: "string", hint: "Ej: 🔋, 🧠, 🫁"}
+              - {label: "Título", name: "title", widget: "string"}
+              - {label: "Texto descriptivo", name: "text", widget: "text"}
+
           - label: "Redes Sociales"
             name: "social"
             widget: "object"
@@ -69,6 +98,13 @@ collections:
               - {label: "X", name: "x", widget: "string"}
               - {label: "Facebook", name: "facebook", widget: "string"}
 
+          - label: "Comunidad"
+            name: "community"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Texto de invitación", name: "text", widget: "text"}
+
           - label: "Contacto"
             name: "contact"
             widget: "object"
@@ -77,3 +113,10 @@ collections:
               - {label: "Email", name: "email", widget: "string"}
               - {label: "Teléfono", name: "phone", widget: "string", required: false}
               - {label: "Ubicación", name: "location", widget: "string"}
+
+          - label: "Política de Privacidad"
+            name: "privacy"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Contenido de Privacidad (Markdown)", name: "content", widget: "text"}
