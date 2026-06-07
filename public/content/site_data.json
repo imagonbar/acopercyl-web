@@ -1,58 +1,4 @@
 {
-  "contact": {
-    "email": "afectadoscovidpersistentecyl@gmail.com",
-    "location": "Castilla y León, España",
-    "footer_text": "Asociación de COVID Persistente de Castilla y León. Trabajando por el reconocimiento y apoyo integral de los afectados.",
-    "phone": "602412587"
-  },
-  "privacy": {
-    "content": "### Responsable del Tratamiento\n\n**Entidad:** ASOCIACIÓN DE COVID PERSISTENTE DE CASTILLA Y LEÓN (ACOPERCYL)\n**CIF:** G24914599\n**Registro:** Nº 0006334 (Sección PRIMERA)\n**Email:** afectadoscovidpersistentecyl@gmail.com\n\n### Finalidad\n\nLos datos recogidos a través del formulario de contacto se utilizarán exclusivamente para atender su solicitud de información o tramitar su alta como socio de la asociación. No se utilizarán para fines publicitarios sin su consentimiento expreso.\n\n### Derechos\n\nUsted tiene derecho a acceder, rectificar y suprimir sus datos, así como otros derechos explicados en la información adicional que puede solicitar por correo electrónico."
-  },
-  "community": {
-    "text": "Conecta con nosotros a través de nuestras plataformas oficiales."
-  },
-  "symptoms": [
-    {
-      "icon": "🔋",
-      "title": "Fatiga Extrema",
-      "text": "Un agotamiento profundo que no mejora con el descanso y limita la actividad diaria."
-    },
-    {
-      "icon": "🧠",
-      "title": "Niebla Mental",
-      "text": "Dificultades cognitivas, problemas de memoria y falta de concentración."
-    },
-    {
-      "icon": "🫁",
-      "title": "Problemas Respiratorios",
-      "text": "Disnea o sensación de falta de aire persistente tras realizar esfuerzos mínimos."
-    },
-    {
-      "icon": "❤️",
-      "title": "Taquicardias",
-      "text": "Alteraciones del ritmo cardíaco y problemas cardiovasculares recurrentes."
-    },
-    {
-      "icon": "🦴",
-      "title": "Dolor Articular",
-      "text": "Dolores musculares y articulares persistentes sin causa aparente."
-    },
-    {
-      "icon": "💤",
-      "title": "Alteraciones del Sueño",
-      "text": "Insomnio o sueño no reparador que agrava el resto de la sintomatología."
-    }
-  ],
-  "social": {
-    "instagram": "https://www.instagram.com/acopercyl/",
-    "x": "https://x.com/Covidpersistcyl",
-    "facebook": "https://www.facebook.com/groups/512722889776789/"
-  },
-  "about": {
-    "mission": "Somos una asociación sin ánimo de lucro formada por personas afectadas por COVID Persistente, familiares y colaboradores, comprometidos con mejorar la vida de quienes sufren esta enfermedad.",
-    "vision": "Nacemos ante la necesidad de dar visibilidad a una enfermedad aún poco reconocida, que afecta profundamente a la salud y calidad de vida de miles de personas.",
-    "struggle": "Trabajamos por el reconocimiento sanitario, social, administrativo y laboral del COVID Persistente. Luchamos por la creación de protocolos médicos unificados y unidades de atención específicas y multidisciplinares."
-  },
   "news": [
     {
       "title": "El PSOE pedirá la reapertura de la unidad especial de referencia en covid persistente",
@@ -62,31 +8,32 @@
       "date": "2026-05-13"
     },
     {
-      "url": "https://www.diariodeleon.es/sociedad/251216/2069574/covid-persistente-obliga-pelear-nuestra-salud.html",
       "title": "Nueva asociación: «El covid persistente nos obliga a pelear por nuestra salud\"",
-      "source": "Diario de León ",
-      "date": "2025-12-16",
-      "image": "https://imagenes.diariodeleon.es/files/og_thumbnail/uploads/2025/12/15/6940769c4adaa.jpeg"
+      "source": "Diario de León",
+      "url": "https://www.diariodeleon.es/sociedad/251216/2069574/covid-persistente-obliga-pelear-nuestra-salud.html",
+      "image": "https://imagenes.diariodeleon.es/files/og_thumbnail/uploads/2025/12/15/6940769c4adaa.jpeg",
+      "date": "2025-12-16"
     },
     {
       "title": "Los enfermos de covid persistente de Castilla y León se unen en busca de apoyo político: «A veces nos miran como si estuviéramos locos»",
       "source": "El Debate",
       "url": "https://www.eldebate.com/espana/castilla-y-leon/20260223/enfermos-covid-persistente-castilla-leon-unen-busca-apoyo-politico-veces-miran-como-estuvieramos-locos_387987.html",
-      "date": "2026-02-26",
-      "image": "https://www.eldebate.com/files/article_social/files/fp/uploads/2026/02/21/6999d1f6c07e4.r_d.1152-540-7371.jpeg"
+      "image": "https://www.eldebate.com/files/article_social/files/fp/uploads/2026/02/21/6999d1f6c07e4.r_d.1152-540-7371.jpeg",
+      "date": "2026-02-26"
     },
     {
-      "url": "https://www.diariodeleon.es/castilla-y-leon/251214/2069397/nace-asociacion-covid-persistente-cyl-visibilizar-realidad-personas-afectadas.html",
       "title": "Nace la Asociación de Covid Persistente de CyL para visibilizar la realidad de las personas afectadas",
-      "image": "https://imagenes.diariodeleon.es/files/og_thumbnail/uploads/2024/06/20/6674993e0bd78.jpeg",
       "source": "Diario de León",
+      "url": "https://www.diariodeleon.es/castilla-y-leon/251214/2069397/nace-asociacion-covid-persistente-cyl-visibilizar-realidad-personas-afectadas.html",
+      "image": "https://imagenes.diariodeleon.es/files/og_thumbnail/uploads/2024/06/20/6674993e0bd78.jpeg",
       "date": "2025-12-14"
     },
     {
-      "url": "https://www.diariodeburgos.es/noticia/zf64c260c-b72c-4916-afe4b8a11443e711/202606/enfermos-de-covid-persistente-exigen-respuestas-medicas",
-      "source": "Diario de Burgos",
-      "date": "2026-06-07",
-      "title": "Enfermos de covid persistente exigen respuestas médicas"
+      "title": "",
+      "source": "",
+      "url": "https://www.eldiasegovia.es/noticia/z6bc9320c-bc17-48e6-ac6667594ef581e1/202604/el-covid-persistente-en-segovia-podria-triplicar-las-cifras",
+      "image": "",
+      "date": ""
     }
   ],
   "faq": [
@@ -123,25 +70,79 @@
       "answer": "Nuestra sede y ámbito principal de actuación es Castilla y León, aunque colaboramos estrechamente con entidades y federaciones a nivel nacional."
     }
   ],
-  "objectives": [
-    {
-      "icon": "⚖️",
-      "title": "Derechos y Reconocimiento",
-      "text": "Luchamos por el reconocimiento legal y administrativo de la enfermedad, asegurando que cada paciente reciba el apoyo y la protección que merece."
-    },
-    {
-      "icon": "🔬",
-      "title": "Investigación y Colaboración",
-      "text": "Impulsamos y colaboramos en proyectos científicos para avanzar en el diagnóstico y tratamiento del COVID Persistente."
-    },
-    {
-      "icon": "📢",
-      "title": "Visibilización",
-      "text": "Sensibilizamos a la sociedad y a las instituciones sobre la realidad de nuestra condición. Damos voz a quienes el silencio ha ocultado."
-    }
-  ],
   "hero": {
     "title": "Vivir con COVID Persistente no debería hacerse en soledad",
     "text": "Información, apoyo y recursos para quienes luchan contra el COVID Persistente en Castilla y León. Dando voz al silencio."
-  }
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/acopercyl/",
+    "x": "https://x.com/Covidpersistcyl",
+    "facebook": "https://www.facebook.com/groups/512722889776789/"
+  },
+  "contact": {
+    "email": "afectadoscovidpersistentecyl@gmail.com",
+    "phone": "602412587",
+    "location": "Castilla y León, España",
+    "footer_text": "Asociación de COVID Persistente de Castilla y León. Trabajando por el reconocimiento y apoyo integral de los afectados."
+  },
+  "about": {
+    "struggle": "Trabajamos por el reconocimiento sanitario, social, administrativo y laboral del COVID Persistente. Luchamos por la creación de protocolos médicos unificados y unidades de atención específicas y multidisciplinares.",
+    "vision": "Nacemos ante la necesidad de dar visibilidad a una enfermedad aún poco reconocida, que afecta profundamente a la salud y calidad de vida de miles de personas.",
+    "mission": "Somos una asociación sin ánimo de lucro formada por personas afectadas por COVID Persistente, familiares y colaboradores, comprometidos con mejorar la vida de quienes sufren esta enfermedad."
+  },
+  "symptoms": [
+    {
+      "text": "Un agotamiento profundo que no mejora con el descanso y limita la actividad diaria.",
+      "title": "Fatiga Extrema",
+      "icon": "🔋"
+    },
+    {
+      "text": "Dificultades cognitivas, problemas de memoria y falta de concentración.",
+      "title": "Niebla Mental",
+      "icon": "🧠"
+    },
+    {
+      "text": "Disnea o sensación de falta de aire persistente tras realizar esfuerzos mínimos.",
+      "title": "Problemas Respiratorios",
+      "icon": "🫁"
+    },
+    {
+      "text": "Alteraciones del ritmo cardíaco y problemas cardiovasculares recurrentes.",
+      "title": "Taquicardias",
+      "icon": "❤️"
+    },
+    {
+      "text": "Dolores musculares y articulares persistentes sin causa aparente.",
+      "title": "Dolor Articular",
+      "icon": "🦴"
+    },
+    {
+      "text": "Insomnio o sueño no reparador que agrava el resto de la sintomatología.",
+      "title": "Alteraciones del Sueño",
+      "icon": "💤"
+    }
+  ],
+  "community": {
+    "text": "Conecta con nosotros a través de nuestras plataformas oficiales."
+  },
+  "privacy": {
+    "content": "### Responsable del Tratamiento\n\n**Entidad:** ASOCIACIÓN DE COVID PERSISTENTE DE CASTILLA Y LEÓN (ACOPERCYL)\n**CIF:** G24914599\n**Registro:** Nº 0006334 (Sección PRIMERA)\n**Email:** afectadoscovidpersistentecyl@gmail.com\n\n### Finalidad\n\nLos datos recogidos a través del formulario de contacto se utilizarán exclusivamente para atender su solicitud de información o tramitar su alta como socio de la asociación. No se utilizarán para fines publicitarios sin su consentimiento expreso.\n\n### Derechos\n\nUsted tiene derecho a acceder, rectificar y suprimir sus datos, así como otros derechos explicados en la información adicional que puede solicitar por correo electrónico."
+  },
+  "objectives": [
+    {
+      "text": "Luchamos por el reconocimiento legal y administrativo de la enfermedad, asegurando que cada paciente reciba el apoyo y la protección que merece.",
+      "title": "Derechos y Reconocimiento",
+      "icon": "⚖️"
+    },
+    {
+      "text": "Impulsamos y colaboramos en proyectos científicos para avanzar en el diagnóstico y tratamiento del COVID Persistente.",
+      "title": "Investigación y Colaboración",
+      "icon": "🔬"
+    },
+    {
+      "text": "Sensibilizamos a la sociedad y a las instituciones sobre la realidad de nuestra condición. Damos voz a quienes el silencio ha ocultado.",
+      "title": "Visibilización",
+      "icon": "📢"
+    }
+  ]
 }
